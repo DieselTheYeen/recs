@@ -30,7 +30,9 @@
 .dsl-blk-v1 #img-wrap {position: relative;width: 400px !important;height: 400px;--slant: 100px;margin: auto !important;z-index: 1;}
 
 .dsl-blk-v1 #img-bg-cont {
-  background: linear-gradient(#486182, #b3bebb) !important;
+  --artbrd1: #486182;
+  --artbrd2: #b3bebb;
+  background: linear-gradient(var(--artbrd1), var(--artbrd2)) !important;
   width: 380px !important;
   margin-left: auto !important;
   clip-path: polygon(var(--slant) 0%, 100% 0%, calc(100% - var(--slant)) 100%, 0% 100%);
