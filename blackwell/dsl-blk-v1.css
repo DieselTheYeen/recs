@@ -6,6 +6,8 @@
 }
 
 .dsl-blk-v1 {
+  --artbrd1: #486182;
+  --artbrd2: #b3bebb;
   width: 500px;
   margin: 40px auto 0;
   padding: 30px 0px;
@@ -14,7 +16,7 @@
   background: #0e0e0f;
   box-shadow: inset 0 0 60px #000, 0px 16px 16px -3px #000;
   z-index: 0;
-  border: 1px solid;border-image: linear-gradient(0deg, #486182, #b3bebb) 1;
+  border: 1px solid;border-image: linear-gradient(0deg, var(--artbrd1), var(--artbrd2)) 1;
 }
 
 .dsl-blk-v1::before {
@@ -30,8 +32,6 @@
 .dsl-blk-v1 #img-wrap {position: relative;width: 400px !important;height: 400px;--slant: 100px;margin: auto !important;z-index: 1;}
 
 .dsl-blk-v1 #img-bg-cont {
-  --artbrd1: #486182;
-  --artbrd2: #b3bebb;
   background: linear-gradient(var(--artbrd1), var(--artbrd2)) !important;
   width: 380px !important;
   margin-left: auto !important;
