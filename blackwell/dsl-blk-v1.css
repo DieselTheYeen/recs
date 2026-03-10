@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {font-family: OldLondon; src: url('https://dieseltheyeen.github.io/recs/fonts/OldLondon.ttf');}
 
-.dsl-blk-v1 b, .dsl-blk-v1 .mycode_bb, .dsl-blk-v1 speak {
-  font-weight: normal;
+.dsl-blk-v1 b, .dsl-blk-v1 .mycode_b, .dsl-blk-v1 speak {
+  font-weight: normal !important;
   color: var(--speech);
 }
 
@@ -17,6 +18,7 @@
   box-shadow: inset 0 0 60px #000, 0px 16px 16px -3px #000;
   z-index: 0;
   border: 1px solid;border-image: linear-gradient(0deg, var(--artbrd1), var(--artbrd2)) 1;
+  font: 15px "EB Garamond";
 }
 
 .dsl-blk-v1::before {
@@ -67,14 +69,14 @@
   content: var(--name);
   position: absolute;
   font: 68px 'OldLondon';
-  bottom: 22px;
+  bottom: 18px;
   right: 0px;
 }
 .dsl-blk-v1 #header::after {
   content: var(--rank);
   position: absolute;
   right: 0px;
-  bottom: -10px;
+  bottom: -8px;
   font: 27px 'OldLondon';
   color: var(--speech);
 }
