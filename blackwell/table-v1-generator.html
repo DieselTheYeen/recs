@@ -111,7 +111,7 @@
     }
 
     function generate() {
-        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: ${_name}; --rank: ${_rank}; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
+        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: '${_name.replaceAll("'", "\\'")}'; --rank: '${_rank.replaceAll("'", "\\'")}'; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
 
 TEXT
 <b>""</b>
