@@ -51,22 +51,24 @@
     .controls form input {
         width: 100%;
     }
-
-    .comingsoon {
-        position: relative;
+    .comingsoon::before {
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: #0005;
+        outline: 1px dashed gray;
+        backdrop-filter: blur(1px);
+        outline-offset: -2px;
     }
-
     .comingsoon::after {
         content: 'Coming Soon';
         position: absolute;
         inset: 0px;
-        background: #0004;
         text-align: center;
-        outline: 1px dashed gray;
-        outline-offset: -2px;
-        backdrop-filter: blur(1px);
         color: #ddd;
         text-shadow: 0px 0px 4px #000;
+        transform: translateY(45%);
+        line-height: 0px;
     }
 
     .post-template {
