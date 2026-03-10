@@ -1,0 +1,245 @@
+<html>
+<style>
+    html {
+        background: #211416;
+        color: #eee;
+    }
+
+    body {
+        background: #2a262f;
+        max-width: 1500px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .post-wrapper {
+        min-height: 900px;
+        display: flex;
+        padding: 40px 8px;
+    }
+
+    .postbit {
+        width: 250px;
+        background: #262129;
+    }
+
+    .actual-post {
+        background: #312d36;
+        flex: 1;
+        display: flex;
+    }
+
+    .controls {
+        width: 400px;
+        height: max-content;
+        margin: 40px 20px 0 0;
+        background: #666;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 2px 2px 4px #000A;
+    }
+
+    .controls form div {
+        display: flex;
+        position: relative;
+    }
+
+    .controls form label {
+        width: 100%;
+    }
+
+    .controls form input {
+        width: 100%;
+    }
+
+    .comingsoon {
+        position: relative;
+    }
+
+    .comingsoon::after {
+        content: 'Coming Soon';
+        position: absolute;
+        inset: 0px;
+        background: #0004;
+        text-align: center;
+        outline: 1px dashed gray;
+        outline-offset: -2px;
+        backdrop-filter: blur(1px);
+        color: #ddd;
+        text-shadow: 0px 0px 4px #000;
+    }
+
+    .post-template {
+        margin: 60px 20px 0 0;
+    }
+
+    .post-template textarea {
+        width: 100%;
+        min-height: 270px;
+        background: #444;
+        color: #eee;
+        resize: none;
+    }
+</style>
+<script>
+    let postTemplate = "";
+    // Editable Fields
+
+    function update() {
+        // TODO: Check empty, check valid
+        // Assign all fields
+        _chart = document.querySelector("#blk-chart").value || "https://i.imgur.com/LLGSL4T.png";
+        _bgart = document.querySelector("#blk-bgart").value || "https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp";
+        _name = document.querySelector("#blk-name").value || "Wolfguy";
+        _rank = document.querySelector("#blk-rank").value || "Runner";
+        _speech = document.querySelector("#blk-speech").value || "#6e96b3";
+        _artborder1 = document.querySelector("#blk-artbrd1").value || "#486182";
+        _artborder2 = document.querySelector("#blk-artbrd2").value || "#b3bebb";
+
+
+        // Apply All Fields
+        document.querySelector(".dsl-blk-v1 #img").src = _chart;
+        document.querySelector(".dsl-blk-v1 #img-bg").src = _bgart;
+        document.querySelector(".dsl-blk-v1").style.setProperty("--name", `"${_name}"`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--rank", `"${_rank}"`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--speech", `${_speech}`);
+        document.querySelector("#blk-artbrd").style.setProperty("background", `linear-gradient(${_artborder1}, ${_artborder2})`)
+        document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd1", `${_artborder1}`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd2", `${_artborder2}`);
+
+        generate();
+    }
+
+    function generate() {
+        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: ${_name}; --rank: ${_rank}; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
+
+TEXT
+<b>""</b>
+
+<center><b>"Speech"</b></center>
+<hr></div><link href="https://dieseltheyeen.github.io/recs/blackwell/dsl-blk-v1.css" rel="stylesheet"></div>`;
+        document.querySelector(".post-template textarea").value = postTemplate;
+    }
+</script>
+
+<body>
+    <div class="post-wrapper">
+        <div class="postbit"></div>
+        <div class="actual-post">
+            <div class="dsl-blk-v1" style="--speech: #6e96b3; --name: 'Wolfguy'; --rank: 'Runner';">
+                <div id="img-wrap">
+                    <div id="img-bg-cont"><img id="img-bg"
+                            src="https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp">
+                    </div>
+                    <div id="img-cont"><img id="img" src="https://i.imgur.com/LLGSL4T.png"></div>
+                    <div id="header"></div>
+                </div>
+                <div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;">
+                    <hr>
+                    <br>
+                    In malesuada interdum nisi ac semper. Etiam nec dolor sed est sodales tempor. <b>"Nam ultrices nibh
+                        magna, in posuere nisl luctus sed."</b> Donec accumsan et elit vitae bibendum. Vivamus mollis
+                    nunc non erat gravida interdum eu vitae arcu. <b>"Sed volutpat ornare sapien nec dictum."</b> Nulla
+                    euismod arcu neque, ac vehicula magna dictum vel. Fusce facilisis sagittis vestibulum. Vivamus ut
+                    justo quis sem vestibulum commodo vel in est. Maecenas rhoncus est at sem vehicula, quis ullamcorper
+                    tortor aliquet. Mauris ac sagittis lacus.
+                    <br><br>
+                    Donec vulputate bibendum mollis. <b>"Suspendisse tellus elit, euismod eu enim eget, rutrum commodo
+                        lacus."</b> Nam non ligula sit amet ligula blandit condimentum. Sed tempus auctor sodales. Cras
+                    ut viverra est. Sed ut porta ex. Vestibulum vehicula ex ut risus ornare venenatis. Sed arcu quam,
+                    aliquet non tortor bibendum, venenatis pretium urna. Praesent libero ipsum, dignissim sed vulputate
+                    in, volutpat a neque.
+                    <br><br>
+                    Aliquam vel sem ut felis malesuada egestas. Mauris fringilla sem eros, sed gravida ipsum viverra sit
+                    amet. Ut sed quam quis purus auctor interdum quis at diam. Duis quam ipsum, efficitur et mauris id,
+                    malesuada feugiat enim. Suspendisse vehicula tellus eu augue semper consequat. Duis vel faucibus
+                    elit. Sed nec lorem mollis, porttitor augue a, scelerisque velit. <b>"Morbi consequat dolor odio, a
+                        finibus risus sollicitudin et."</b> Donec lacus purus, pretium ut elit in, vulputate auctor
+                    ipsum.
+                    <br><br>
+                    <center><b>"Speech"</b></center>
+                    <br>
+                    <hr>
+                </div>
+                <link href="https://dieseltheyeen.github.io/recs/blackwell/dsl-blk-v1.css" rel="stylesheet">
+            </div>
+            <div>
+                <div class="controls">
+                    <form oninput="update()">
+                        <div class="comingsoon">
+                            <label for="">Image Shape:</label>
+                            <button><svg width="42" viewBox="0 0 15 15">
+                                    <path stroke="1" d="M1 14 4 1 13 1 10 14Z" />
+                                </svg></button>
+                            <button><svg width="42" viewBox="0 0 15 15">
+                                    <path stroke="1" d="M2 13 2 5 7.5 3 13 5 13 13Z" />
+                                </svg></button>
+                            <button><svg width="42" viewBox="0 0 20 15">
+                                    <path stroke="1"
+                                        d="M5 14 1 4 5 3 7 14ZM8 14 6 1 14 1 12 14ZM13 14 15 3 19 4 15 14Z" />
+                                </svg></button>
+                        </div>
+                        <div>
+                            <label for="blk-chart">Character Art (URL):</label>
+                            <input id="blk-chart" type="text" placeholder="https://link.to.your/character.png">
+                        </div>
+                        <div>
+                            <label for="blk-bgart">Background Art (URL):</label>
+                            <input id="blk-bgart" type="text" placeholder="https://link.to.your/background.jpg">
+                        </div>
+                        <div>
+                            <label for="blk-name">Name: </label>
+                            <input id="blk-name" type="text" placeholder="Wolfguy">
+                        </div>
+                        <div>
+                            <label for="blk-rank">Rank: </label>
+                            <input id="blk-rank" type="text" placeholder="Runner">
+                        </div>
+                        <div>
+                            <label for="blk-speech">Speech Color: </label>
+                            <input id="blk-speech" type="color" placeholder="#6e96b3" value="#6e96b3">
+                        </div>
+                        <hr>
+                        <div>
+                            <label for="blk-artbrd1">Art Border Color Top:</label>
+                            <input id="blk-artbrd1" type="color" style="margin: 0 40px 0 0; width: calc(100% - 80px);"
+                                value="#486182">
+                            <div id="blk-artbrd"
+                                style="position: absolute;width: 30px;height: 200%;right: 0px; background: linear-gradient(#486182, #b3bebb);">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="blk-artbrd2">Art Border Color Bottom:</label>
+                            <input id="blk-artbrd2" type="color" style="margin: 0 40px 0 0; width: calc(100% - 80px);"
+                                value="#b3bebb">
+                        </div>
+                        <span>-or-</span>
+                        <div class="comingsoon">
+                            <label for="">Art Border CSS</label>
+                            <input id="" type="text" placeholder="background: ;">
+                        </div>
+                        <hr>
+                        <div class="comingsoon">
+                            <label for="">Table Border Color #1:</label>
+                            <input id="" type="color">
+                        </div>
+                        <div class="comingsoon">
+                            <label for="">Table Border Color #2:</label>
+                            <input id="" type="color">
+                        </div>
+                        <span>-or-</span>
+                        <div class="comingsoon">
+                            <label for="">Table Border CSS</label>
+                            <input id="" type="text" placeholder="background: ;">
+                        </div>
+                    </form>
+                </div>
+                <div class="post-template">
+                    <textarea readonly draggable="false"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
