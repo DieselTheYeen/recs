@@ -51,6 +51,7 @@
     .controls form input {
         width: 100%;
     }
+
     .comingsoon::before {
         content: '';
         position: absolute;
@@ -60,6 +61,7 @@
         backdrop-filter: blur(1px);
         outline-offset: -2px;
     }
+
     .comingsoon::after {
         content: 'Coming Soon';
         position: absolute;
@@ -72,7 +74,7 @@
     }
 
     .post-template {
-        margin: 60px 20px 0 0;
+        margin: 0 20px 0 0;
     }
 
     .post-template textarea {
@@ -94,7 +96,7 @@
         _bgart = document.querySelector("#blk-bgart").value || "https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp";
         _name = document.querySelector("#blk-name").value || "Wolfguy";
         _rank = document.querySelector("#blk-rank").value || "Runner";
-        _speech = document.querySelector("#blk-speech").value || "#6e96b3";
+        _speech = document.querySelector("#blk-speech").value || "#f57c2c";
         _artborder1 = document.querySelector("#blk-artbrd1").value || "#486182";
         _artborder2 = document.querySelector("#blk-artbrd2").value || "#b3bebb";
 
@@ -128,7 +130,7 @@ TEXT
     <div class="post-wrapper">
         <div class="postbit"></div>
         <div class="actual-post">
-            <div class="dsl-blk-v1" style="--speech: #6e96b3; --name: 'Wolfguy'; --rank: 'Runner';">
+            <div class="dsl-blk-v1" style="--speech: #f57c2c; --name: 'Wolfguy'; --rank: 'Runner';">
                 <div id="img-wrap">
                     <div id="img-bg-cont"><img id="img-bg"
                             src="https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp">
@@ -199,7 +201,7 @@ TEXT
                         </div>
                         <div>
                             <label for="blk-speech">Speech Color: </label>
-                            <input id="blk-speech" type="color" placeholder="#6e96b3" value="#6e96b3">
+                            <input id="blk-speech" type="color" placeholder="#f57c2c" value="#f57c2c">
                         </div>
                         <hr>
                         <div>
@@ -236,6 +238,13 @@ TEXT
                         </div>
                     </form>
                 </div>
+                <div style="position: relative;"><svg width="100pt" height="100pt" version="1.1" viewBox="0 0 100 100"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="height: 70px;width: calc(100% - 20px);margin: 10px 0px;" fill="#888" stroke="#000">
+                        <path
+                            d="m75.82 56.699c0.45313-0.45703 0.69922-1.0859 0.67578-1.7305 0.015625-0.63672-0.22656-1.25-0.67578-1.6992-0.44531-0.46094-1.0547-0.71875-1.6953-0.71094h-14.484v-34.047h-19.281v34.047h-14.484c-1.3242 0.011718-2.3945 1.082-2.4062 2.4023 0.023438 0.67578 0.28906 1.3203 0.75 1.8164l24.125 24.031c0.43359 0.44531 1.0352 0.69141 1.6562 0.67969 0.64844 0.023438 1.2734-0.22266 1.7305-0.67969z">
+                        </path>
+                    </svg></div>
                 <div class="post-template">
                     <textarea readonly draggable="false" onfocus="this.select();"></textarea>
                 </div>
