@@ -38,20 +38,33 @@
         padding: 20px;
         box-shadow: 2px 2px 4px #000A;
     }
+    .controls button, .controls input {
+        height: 27px;
+    }
 
     .controls form div {
         display: flex;
         position: relative;
     }
+    .controls form div * {
+        flex: 1;
+    }
 
-    .controls form label {
-        width: 100%;
+    .controls>form>div>label:first-child {
+        flex: 0 0 170px;
     }
 
     .controls form input {
-        width: 100%;
+        
+    }
+    .controls form .control-indent {
+        display: block;
+        padding-left: 12px;
     }
 
+    .control-indent>div>label:first-child {
+        flex: 0 0 158px;
+    }
     .comingsoon::before {
         content: '';
         position: absolute;
@@ -88,6 +101,12 @@
 <script>
     let postTemplate = "";
     // Editable Fields
+    _flip = 1;
+
+    function flipimg() {
+        _flip *= -1;
+        update();
+    }
 
     function update() {
         // TODO: Check empty, check valid
@@ -99,6 +118,9 @@
         _speech = document.querySelector("#blk-speech").value || "#f57c2c";
         _artborder1 = document.querySelector("#blk-artbrd1").value || "#486182";
         _artborder2 = document.querySelector("#blk-artbrd2").value || "#b3bebb";
+        _x = `${document.querySelector("#blk-x").value || -10}px`;
+        _y = `${document.querySelector("#blk-y").value || -130}px`;
+        _w = `${document.querySelector("#blk-w").value || 720}px`;
 
 
         // Apply All Fields
@@ -110,12 +132,16 @@
         document.querySelector("#blk-artbrd").style.setProperty("background", `linear-gradient(${_artborder1}, ${_artborder2})`)
         document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd1", `${_artborder1}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd2", `${_artborder2}`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--f", `scaleX(${_flip})`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--x", `${_x}`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--y", `${_y}`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--w", `${_w}`);
 
         generate();
     }
 
     function generate() {
-        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: '${_name.replaceAll("'", "\\'")}'; --rank: '${_rank.replaceAll("'", "\\'")}'; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
+        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: '${_name.replaceAll("'", "\\'")}'; --rank: '${_rank.replaceAll("'", "\\'")}'; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}; --x: ${_x}; --y: ${_y}; --w: ${_w}; --f: scaleX(${_flip});"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
 
 TEXT
 <b>""</b>
@@ -172,20 +198,40 @@ TEXT
                     <form oninput="update()">
                         <div class="comingsoon">
                             <label for="">Image Shape:</label>
-                            <button><svg width="42" viewBox="0 0 15 15">
+                            <button style="height: 48px;"><svg width="42" viewBox="0 0 15 15">
                                     <path stroke="1" d="M1 14 4 1 13 1 10 14Z" />
                                 </svg></button>
-                            <button><svg width="42" viewBox="0 0 15 15">
+                            <button style="height: 48px;"><svg width="42" viewBox="0 0 15 15">
                                     <path stroke="1" d="M2 13 2 5 7.5 3 13 5 13 13Z" />
                                 </svg></button>
-                            <button><svg width="42" viewBox="0 0 20 15">
+                            <button style="height: 48px;"><svg width="42" viewBox="0 0 20 15">
                                     <path stroke="1"
                                         d="M5 14 1 4 5 3 7 14ZM8 14 6 1 14 1 12 14ZM13 14 15 3 19 4 15 14Z" />
                                 </svg></button>
                         </div>
-                        <div>
-                            <label for="blk-chart">Character Art (URL):</label>
-                            <input id="blk-chart" type="text" placeholder="https://link.to.your/character.png">
+                        <span>Character Art</span>
+                        <div class="control-indent">
+                            <div>
+                                <label for="blk-chart">Image Link:</label>
+                                <input id="blk-chart" type="text" placeholder="https://link.to.your/character.png">
+                            </div>
+                            <div>
+                                <label for=""></label>
+                                <div>
+                                    <button type="button" onclick="flipimg()">⇿ Flip</button>
+                                </div>
+                                <div>
+                                    <label for="blk-w" style="text-align: right; line-height: 21px;">Width:</label>
+                                    <input id="blk-w" type="number" style="width: 60px;" value="740">
+                                </div>
+                            </div>
+                            <div>
+                                <label for=""></label>
+                                <label for="blk-x" style="text-align: right; line-height: 21px;">X:</label>
+                                <input id="blk-x" type="number" style="width: 60px;" value="-130">
+                                <label for="blk-y" style="text-align: right; line-height: 21px;">Y:</label>
+                                <input id="blk-y" type="number" style="width: 60px;" value="-10">
+                            </div>
                         </div>
                         <div>
                             <label for="blk-bgart">Background Art (URL):</label>
