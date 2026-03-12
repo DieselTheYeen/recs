@@ -86,14 +86,14 @@
   content: var(--name);
   position: absolute;
   font: 68px 'OldLondon';
-  bottom: 18px;
+  bottom: 25px;
   right: 0px;
 }
 .dsl-blk-v1 #header::after {
   content: var(--rank);
   position: absolute;
   right: 0px;
-  bottom: -8px;
+  bottom: -12px;
   font: 27px 'OldLondon';
   color: var(--speech);
 }
