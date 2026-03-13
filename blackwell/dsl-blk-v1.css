@@ -13,6 +13,7 @@
   --y: -10px;
   --w: 740px;
   --f: scaleX(1);
+  --dbg: #19191e;
   width: 500px;
   margin: 40px auto 50px;
   padding: 30px 0px;
@@ -30,7 +31,7 @@
   inset: 0;
   mask: url('https://i.imgur.com/6OXsAgj.png') center/400px;
   z-index: -1;
-  background: #19191e;
+  background: var(--dbg);
   box-shadow: inset 0 0 60px #000;
 }
 .dsl-blk-v1::after {
