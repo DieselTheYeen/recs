@@ -2,6 +2,7 @@
 <style>
     html {
         background: #211416;
+        font-family: Arial,Helvetica,sans-serif;
         color: #eee;
     }
 
@@ -51,6 +52,7 @@
 
     .controls form div * {
         flex: 1;
+        align-items: center;
     }
 
     .controls>form>div>label:first-child {
@@ -59,10 +61,6 @@
     .flex-indent {
         margin-left: 10px;
         flex: 0 0 146px !important;
-    }
-
-    .controls form label {
-        line-height: 24px;
     }
 
     .controls form .control-indent {
@@ -85,7 +83,7 @@
     }
 
     .comingsoon::after {
-        content: 'Coming Soon';
+        content: 'Coming Soon?';
         position: absolute;
         inset: 0px;
         text-align: center;
@@ -127,17 +125,15 @@
     _enable_t2 = false;
     _flip = 1;
     dbg_corner = "bottom right";
+    text_align = "justify";
 
     function flipimg() {
         _flip *= -1;
         update(null);
     }
 
-    function corner_select(corner) {
-        dbg_corner = corner;
-        
-        // update 'active' button
-        // TODO: move this into a universal function for other button groups
+    function UpdateButtonGroup() {
+        console.log(event);
         document.querySelectorAll(`#${event.target.parentElement.id}>*`).forEach((button)=>{
             button.classList.remove("active");
         });
@@ -146,17 +142,30 @@
         update(null);
     }
 
+    var font_family = "";
+    function validateFontLink(link) {
+        if ( link.startsWith("<link") && link.endsWith(`rel="stylesheet">`) ) {
+            font_family = link.match(/family=(.*?):/)[1].replaceAll('+', ' ');
+            return link;
+        } else {
+            font_family = "";
+            return "";
+        }
+    }
+
     function update(e) {
-        // Some values have more than one fields the user can use, and we need to know which one was edited to rpelace the other's value
+        // Some values can be entered as a colour picker, or text. We need to know which one was edited to rpelace the other's value.
         if (e != null) {
-        if (e.target.id == "blk-speech-txt") { document.querySelector("#blk-speech-col").value = document.querySelector("#blk-speech-txt").value; }
-        if (e.target.id == "blk-speech-col") { document.querySelector("#blk-speech-txt").value = document.querySelector("#blk-speech-col").value; }
-        if (e.target.id == "blk-artbrd1-txt") { document.querySelector("#blk-artbrd1-col").value = document.querySelector("#blk-artbrd1-txt").value; }
-        if (e.target.id == "blk-artbrd1-col") { document.querySelector("#blk-artbrd1-txt").value = document.querySelector("#blk-artbrd1-col").value; }
-        if (e.target.id == "blk-artbrd2-txt") { document.querySelector("#blk-artbrd2-col").value = document.querySelector("#blk-artbrd2-txt").value; }
-        if (e.target.id == "blk-artbrd2-col") { document.querySelector("#blk-artbrd2-txt").value = document.querySelector("#blk-artbrd2-col").value; }
-        if (e.target.id == "blk-dmskbg-txt") { document.querySelector("#blk-dmskbg-col").value = document.querySelector("#blk-dmskbg-txt").value; }
-        if (e.target.id == "blk-dmskbg-col") { document.querySelector("#blk-dmskbg-txt").value = document.querySelector("#blk-dmskbg-col").value; }
+            if (e.target.id == "blk-speech-txt") { document.querySelector("#blk-speech-col").value = document.querySelector("#blk-speech-txt").value; }
+            if (e.target.id == "blk-speech-col") { document.querySelector("#blk-speech-txt").value = document.querySelector("#blk-speech-col").value; }
+            if (e.target.id == "blk-artbrd1-txt") { document.querySelector("#blk-artbrd1-col").value = document.querySelector("#blk-artbrd1-txt").value; }
+            if (e.target.id == "blk-artbrd1-col") { document.querySelector("#blk-artbrd1-txt").value = document.querySelector("#blk-artbrd1-col").value; }
+            if (e.target.id == "blk-artbrd2-txt") { document.querySelector("#blk-artbrd2-col").value = document.querySelector("#blk-artbrd2-txt").value; }
+            if (e.target.id == "blk-artbrd2-col") { document.querySelector("#blk-artbrd2-txt").value = document.querySelector("#blk-artbrd2-col").value; }
+            if (e.target.id == "blk-dmskbg-txt") { document.querySelector("#blk-dmskbg-col").value = document.querySelector("#blk-dmskbg-txt").value; }
+            if (e.target.id == "blk-dmskbg-col") { document.querySelector("#blk-dmskbg-txt").value = document.querySelector("#blk-dmskbg-col").value; }
+            if (e.target.id == "blk-font-txt") { document.querySelector("#blk-font-col").value = document.querySelector("#blk-font-txt").value; }
+            if (e.target.id == "blk-font-col") { document.querySelector("#blk-font-txt").value = document.querySelector("#blk-font-col").value; }
         }
 
         // Oi, don't look at these secret controls
@@ -168,8 +177,7 @@
             document.querySelector(".req-t1").style.setProperty("display", "none");
         }
 
-        // TODO: Check empty, check valid
-        // Assign all fields
+        // Track each field as a variable
         _chart = document.querySelector("#blk-chart").value || "https://i.imgur.com/LLGSL4T.png";
         _bgart = document.querySelector("#blk-bgart").value || "https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp";
         _name = document.querySelector("#blk-name").value || "Wolfguy";
@@ -181,9 +189,15 @@
         _y = `${document.querySelector("#blk-y").value || -130}px`;
         _w = `${document.querySelector("#blk-w").value || 720}px`;        
         _dbg = (document.querySelector("#blk-dmskbg-check").checked & _enable_t2) ? `radial-gradient(circle at ${dbg_corner}, ${document.querySelector("#blk-dmskbg-col").value} -60%, #19191e 60%)` : "#19191e";
+        _fs = document.querySelector("#blk-font-size").value;
+        _fc = document.querySelector("#blk-font-col").value || "#999999";
+        _lh = document.querySelector("#blk-font-height").value;
+        _ta = text_align;
+        _fsrc = validateFontLink(document.querySelector("#blk-font-src").value);
+        _ff = font_family;
+        document.querySelector("#blk-font-family-txt").value = _ff || 'Insert link above';
 
-
-        // Apply All Fields
+        // Apply All Fields to current DOM
         document.querySelector(".dsl-blk-v1").style = "" // clear all
         document.querySelector(".dsl-blk-v1 #img").src = _chart;
         document.querySelector(".dsl-blk-v1 #img-bg").src = _bgart;
@@ -193,20 +207,39 @@
         document.querySelector(".dsl-blk-v1").style.setProperty("--speech", `${_speech}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd1", `${_artborder1}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--artbrd2", `${_artborder2}`);
-        document.querySelector(".dsl-blk-v1").style.setProperty("--f", `scaleX(${_flip})`);
+        document.querySelector(".dsl-blk-v1").style.setProperty("--t", `scaleX(${_flip})`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--x", `${_x}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--y", `${_y}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--w", `${_w}`);
         document.querySelector(".dsl-blk-v1").style.setProperty("--dbg", _dbg);
+        document.querySelector(".dsl-blk-v1-cont").style.setProperty("--fs", `${_fs}px`);
+        document.querySelector(".dsl-blk-v1-cont").style.setProperty("--fc", `${_fc}`);
+        document.querySelector(".dsl-blk-v1-cont").style.setProperty("--lh", `${_lh}`);
+        document.querySelector(".dsl-blk-v1-cont").style.setProperty("--ta", `${_ta}`);
+        document.querySelector(".dsl-blk-v1-cont").style.setProperty("--ff", `${_ff}`);
+        document.querySelector("#font-loader").innerHTML = _fsrc;
 
+        // Generate post table
         generate();
     }
 
     function generate() {
         // some values are only shown if they are enabled
-        var if_dbg = (document.querySelector("#blk-dmskbg-check").checked & _enable_t2) ? ` --dbg: ${_dbg};` : '';        
+        var if_dbg = (document.querySelector("#blk-dmskbg-check").checked & _enable_t2) ? ` --dbg: ${_dbg};` : '';
+        var if_fs = (_fs != 15 && _fs) ? `--fs: ${_fs}px; ` : '';
+        var if_fc = (_fc != '#999999' && _fc) ? `--fc: ${_fc}; ` : '';
+        var if_ta = _ta ? `--ta: ${_ta}; ` : '';
+        var if_lh = _lh ? `--lh: ${_lh}; ` : '';
+        var if_fsrc = _fsrc ? _fsrc : '';
+        var if_ff = _ff ? `--ff: ${_ff}; ` : '';
 
-        postTemplate = `<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: '${_name.replaceAll("'", "\\'")}'; --rank: '${_rank.replaceAll("'", "\\'")}'; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}; --x: ${_x}; --y: ${_y}; --w: ${_w}; --f: scaleX(${_flip});${if_dbg}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;"><hr>
+        //--fs: 15px;
+        //--fc: #999;
+        //--ta: justify;
+        //--ff: "EB Garamond";
+        //--lh: unset;
+
+        postTemplate = `${_fsrc}<div class="dsl-blk-v1" style="--speech: ${_speech}; --name: '${_name.replaceAll("'", "\\'")}'; --rank: '${_rank.replaceAll("'", "\\'")}'; --artbrd1: ${_artborder1}; --artbrd2: ${_artborder2}; --x: ${_x}; --y: ${_y}; --w: ${_w}; --t: scaleX(${_flip});${if_dbg}"><div id="img-wrap"><div id="img-bg-cont"><img id="img-bg" src="${_bgart}"></div><div id="img-cont"><img id="img" src="${_chart}"></div><div id="header"></div></div><div class="dsl-blk-v1-cont" style="${if_fs}${if_ff}${if_fc}${if_ta}${if_lh}"><hr>
 
 TEXT
 <b>""</b>
@@ -229,6 +262,7 @@ TEXT
     <div class="post-wrapper" style="min-height: 900px;">
         <div class="postbit"></div>
         <div class="actual-post">
+            <div id="font-loader"></div>
             <div class="dsl-blk-v1" style="--speech: #f57c2c; --name: 'Wolfguy'; --rank: 'Runner';">
                 <div id="img-wrap">
                     <div id="img-bg-cont"><img id="img-bg" src="https://cdna.artstation.com/p/assets/images/images/092/382/092/large/killian-prevost-ritual.webp">
@@ -236,7 +270,7 @@ TEXT
                     <div id="img-cont"><img id="img" src="https://i.imgur.com/LLGSL4T.png"></div>
                     <div id="header"></div>
                 </div>
-                <div style="padding: 0px 40px; text-align: justify;margin: 30px 0px 0px;color: #999;">
+                <div class="dsl-blk-v1-cont" style="">
                     <hr>
                     <br>
                     In malesuada interdum nisi ac semper. Etiam nec dolor sed est sodales tempor. <b>"Nam ultrices nibh
@@ -263,7 +297,7 @@ TEXT
                     <br>
                     <hr>
                 </div>
-                <link href="dsl-blk-v1.css" rel="stylesheet">
+                <link href="https://dieseltheyeen.github.io/recs/blackwell/dsl-blk-v1.css" rel="stylesheet">
             </div>
             <div>
                 <p class="instruction"><span style="color: #00e300">❷</span> Fill in each field here:</p>
@@ -325,15 +359,15 @@ TEXT
                             </div>
                         </div>
                         <div>
-                            <label for="blk-artbrd1">Art Border Top:</label>
+                            <label for="blk-artbrd1">Gradient Top:</label>
                             <div>
                                 <input id="blk-artbrd1-col" type="color" value="#486182">
                                 <input id="blk-artbrd1-txt" type="text" placeholder="#486182" value="#486182" style="width: 140px">
-                                <div id="blk-artbrd" style="height: 200%;flex: 0 0 30px; background: linear-gradient(#486182, #b3bebb);"></div>
+                                <div id="blk-artbrd" style="height: 200%;flex: 0 0 30px; background: linear-gradient(#486182, #b3bebb); translate: 0 12px;"></div>
                             </div>
                         </div>
                         <div>
-                            <label for="blk-artbrd2">Art Border Bottom:</label>
+                            <label for="blk-artbrd2">Gradient Bottom:</label>
                             <div>
                                 <input id="blk-artbrd2-col" type="color" value="#b3bebb">
                                 <input id="blk-artbrd2-txt" type="text" placeholder="#b3bebb" value="#b3bebb" style="width: 140px; margin-right: 30px;">
@@ -341,8 +375,38 @@ TEXT
                         </div>
                         <hr>
                         <div>
-
+                            <label>Customize Font:</label>
+                            <input id="blk-font-col" type="color" value="#999999">
+                            <input id="blk-font-txt" type="text" placeholder="#999999" style="width: 170px;">
                         </div>
+                        <div>
+                            <label></label>
+                            <!-- Font size -->
+                            <label style="padding-left: 10px;"><b style="font-size: 12px;">A</b><b style="font-size: 24px;">A</b></label>
+                            <input id="blk-font-size" type="number" placeholder="15" value="15" style="width: 70px;">
+                            <!-- line-spacing --> 
+                             <label style="padding-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#eee"><path d="M240-160 80-320l56-56 64 62v-332l-64 62-56-56 160-160 160 160-56 56-64-62v332l64-62 56 56-160 160Zm240-40v-80h400v80H480Zm0-240v-80h400v80H480Zm0-240v-80h400v80H480Z"/></svg></label>
+                            <input id="blk-font-height" type="number" style="width: 70px;">
+                        </div>
+                        <div>
+                            <label></label>
+                            <!-- Justification --><div id="button-group-font-align">
+                                <button type="button" onclick="text_align='left'; UpdateButtonGroup()" class="active"><svg style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-80h720v80H120Zm0-160v-80h480v80H120Zm0-160v-80h720v80H120Zm0-160v-80h480v80H120Zm0-160v-80h720v80H120Z"/></svg></button>
+                                <button type="button" onclick="text_align='justify'; UpdateButtonGroup()"><svg style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-80h720v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Zm0-160v-80h720v80H120Z"/></svg></button>
+                                <button type="button" onclick="text_align='center'; UpdateButtonGroup()"><svg style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-80h720v80H120Zm160-160v-80h400v80H280ZM120-440v-80h720v80H120Zm160-160v-80h400v80H280ZM120-760v-80h720v80H120Z"/></svg></button>
+                                <button type="button" onclick="text_align='right'; UpdateButtonGroup()"><svg style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-760v-80h720v80H120Zm240 160v-80h480v80H360ZM120-440v-80h720v80H120Zm240 160v-80h480v80H360ZM120-120v-80h720v80H120Z"/></svg></button>
+                            </div>
+                        </div>
+                        <div>
+                             <!-- Custom Font -->
+                            <label>Embed Google Font:</label>
+                            <input id="blk-font-src" type="text" placeholder='<link href="https://fonts.googleapis.com/...'>
+                         </div>
+                        <div>
+                             <!-- Custom Font line 2 -->
+                            <label>Detected font-family:</label>
+                            <input disabled readonly id="blk-font-family-txt" placeholder="Insert link above">
+                         </div>
                         <div class="req-t1" style="display: none;">
                             <hr>
                             <span style="display: block; margin-bottom: 2px;">T2+ Rank Perks:</span>
@@ -357,10 +421,10 @@ TEXT
                             <div>
                                 <label class="flex-indent">Corner:</label>
                                 <div style="margin-left: 14px;" id="button-group-dbg">
-                                    <button type="button" onclick="corner_select('top left')">↖</button>
-                                    <button type="button" onclick="corner_select('top right')">↗</button>
-                                    <button type="button" onclick="corner_select('bottom left')">↙</button>
-                                    <button type="button" onclick="corner_select('bottom right')" class="active">↘</button>
+                                    <button type="button" onclick="dbg_corner = 'top left'; UpdateButtonGroup();">↖</button>
+                                    <button type="button" onclick="dbg_corner = 'top right'; UpdateButtonGroup();">↗</button>
+                                    <button type="button" onclick="dbg_corner = 'bottom left'; UpdateButtonGroup();">↙</button>
+                                    <button type="button" onclick="dbg_corner = 'bottom right'; UpdateButtonGroup();" class="active">↘</button>
                                 </div>
                             </div>
                         </div>
