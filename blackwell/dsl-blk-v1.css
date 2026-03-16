@@ -113,7 +113,7 @@
   --lh: unset;
   padding: 0px 40px;
   margin: 30px 0px 0px;
-  font: var(--ts) var(--ff);
+  font: var(--fs) var(--ff);
   color: var(--fc);
   text-align: var(--ta);
   line-height: var(--lh);
