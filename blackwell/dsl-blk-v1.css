@@ -110,11 +110,13 @@
   --fc: #999;
   --ta: justify;
   --ff: "EB Garamond";
+  --lh: unset;
   padding: 0px 40px;
   margin: 30px 0px 0px;
   font: var(--ts) var(--ff);
   color: var(--fc);
   text-align: var(--ta);
+  line-height: var(--lh);
 }
 @media (max-width: 1200px) {
   .dsl-blk-v1::before {
