@@ -27,7 +27,7 @@
 .dsl-blk-v1::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: 1px;
   mask: url('https://i.imgur.com/6OXsAgj.png') center/400px;
   z-index: -1;
   background: var(--dbg);
