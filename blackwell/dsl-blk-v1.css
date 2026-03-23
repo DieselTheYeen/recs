@@ -122,4 +122,11 @@
   .dsl-blk-v1::before {
     display: none;
   }
+  .dsl-blk-v1 img {
+    display: unset;
+  }
+  .dsl-blk-v1 #img-wrap {
+    scale: 70%;
+    left: -60px;
+  }
 }
