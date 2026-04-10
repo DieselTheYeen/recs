@@ -1,13 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
 
 .dsl-alu-v1 {
-  width: 600px;
+  position: relative;
+  width: 500px;
   margin: 40px auto;
-  min-height: 900px;
-  outline: 1px dashed grey;
-
-  speak {
-    font-size: 12px 'Amarante';
-    color: blue;
+  padding: 10px 30px 30px;
+  background: linear-gradient(#364958 calc(50% - 540px), #0000 calc(50% - 440px),#0000 calc(100% - (50% - 440px)), #06090E calc(100% - (50% - 540px))), url('https://cdnb.artstation.com/p/assets/images/images/012/138/145/large/max-suleimanov-dv-141.jpg') 80%/1920px no-repeat;
+  border: 3px solid;
+  border-image: linear-gradient(125deg, #faf7eb, #f0dc91, #daa661) 1;
+  box-shadow: 0 30px 40px #000, inset 0 0 40px #000;
+  font: 13px 'Winky Rough';
+  
+  banner {
+    display: block;
+    width: 400px;
+    height: 110px;
+    background: red;
+    position: relative;
+    margin: -130px auto 40px;
+    background: url('https://svgsilh.com/svg/1902842-dab375.svg') center/350px no-repeat;
+    padding: 38px 80px 20px;
+    text-align: center;
+    font: 20px 'Amarante';
+    color: #454c4c;
+    filter: drop-shadow(0 0 8px #000);
+  }
+  
+  speak, car {
+    font: 13px 'Amarante';
+    color: #64bf99;
+    text-shadow: 0 0 4px #FFF;
+  }
+  car {
+    color: #f0790a;
+  }
+  
+  
+  >div {
+    padding: 20px;
+    text-align: justify;
+    color: #3F3F3F;
+    background: #FFF9F1;
+    box-shadow: 0 0 20px #000, inset 0 0 60px #8f774abf, inset 0 0 10px;
+    border: 3px solid;
+    border-image: linear-gradient(125deg, #faf7eb, #f0dc91, #daa661) 1;
+  }
+  
+  &::after {
+    content: 'Code by Diesel ♥';
+    position: absolute;
+    inset: auto -3px -22px;
+  }
+  
+  hr {
+    
+  display: inline-block;
+  width: 100%;
+  height: 20px !important;
+  margin: 4px 0 22px;
+  background: url('https://svgsilh.com/svg/2154993-e5c179.svg') center/280px no-repeat;
+  rotate: 180deg;
   }
 }
