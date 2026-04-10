@@ -12,6 +12,21 @@
   box-shadow: 0 30px 40px #000, inset 0 0 40px #000;
   font: 13px 'Winky Rough';
   
+  banner {
+    display: block;
+    width: 400px;
+    height: 110px;
+    background: red;
+    position: relative;
+    margin: -130px auto 40px;
+    background: url('https://svgsilh.com/svg/1902842-dab375.svg') center/350px no-repeat;
+    padding: 38px 80px 20px;
+    text-align: center;
+    font: 20px 'Amarante';
+    color: #454c4c;
+    filter: drop-shadow(0 0 8px #000);
+  }
+  
   speak, car {
     font: 13px 'Amarante';
     color: #64bf99;
@@ -39,11 +54,12 @@
   }
   
   hr {
+    
   display: inline-block;
   width: 100%;
   height: 20px !important;
   margin: 4px 0 22px;
-  background: url('https://svgsilh.com/svg/2154993-64bf99.svg') center/280px no-repeat;
+  background: url('https://svgsilh.com/svg/2154993-e5c179.svg') center/280px no-repeat;
   rotate: 180deg;
   }
 }
