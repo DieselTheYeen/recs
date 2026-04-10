@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+.dsl-alu-v1 {
+  width: 600px;
+  margin: 40px auto;
+  min-height: 900px;
+  outline: 1px dashed grey;
+
+  speak {
+    font-size: 12px 'Amarante';
+    color: blue;
+  }
+}
