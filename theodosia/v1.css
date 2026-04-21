@@ -1,8 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/tipofila');
+@property --border-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 
 .dsl-theo-v1 {
     --border-gradient: linear-gradient(140deg, #fff, #ff9180);
-    --border-offset: 0deg;
     position: relative;
     width: 500px;
     margin: 40px auto 70px;
@@ -18,10 +23,10 @@
     }
 
     hr {
-        background: url('https://svgsilh.com/svg/3166117-e6938c.svg') center/180px no-repeat;
-        margin: 6px auto;
-        height: 20px !important;
-        width: 70%;
+        background: url('https://svgsilh.com/svg/3166117-e6938c.svg') center/220px no-repeat;
+        margin: -10px auto 6px;
+        height: 40px !important;
+        transform: scaleY(-1);
     }
 
 
@@ -29,7 +34,9 @@
         position: absolute;
         inset: -14px;
         border: 2px solid;
-        border-image: repeating-conic-gradient(from 0deg, #0000, #0000 5%, #fff 25%) 1;
+        border-image: repeating-conic-gradient(from var(--border-offset), #0000, #0000 5%, #fff 25%) 1;
+        filter: drop-shadow(0px 0px 2px #ffc8c8);
+        animation: rotate-border 6s infinite linear;
     }
 
     #bg {
