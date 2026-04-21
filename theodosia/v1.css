@@ -1,0 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/tipofila');
+
+.dsl-theo-v1 {
+    --border-gradient: linear-gradient(140deg, #fff, #ff9180);
+    --border-offset: 0deg;
+    position: relative;
+    width: 500px;
+    margin: 40px auto 70px;
+    box-shadow: 0 0 6px #000;
+    padding: 28px;
+    background: var(--border-gradient);
+    z-index: 0;
+
+    b,
+    .mycode_b {
+        color: #628c00;
+        font-weight: normal;
+    }
+
+    hr {
+        background: url('https://svgsilh.com/svg/3166168-6a8c1c.svg') center/180px no-repeat;
+        margin: 6px auto;
+        height: 20px !important;
+        width: 70%;
+    }
+
+
+    #outbord {
+        position: absolute;
+        inset: -14px;
+        border: 2px solid;
+        border-image: repeating-conic-gradient(from 0deg, #0000, #0000 5%, #fff 25%) 1;
+    }
+
+    #bg {
+        position: absolute;
+        inset: 2px;
+        background: radial-gradient(#0000 70%, #0009), url('https://cdna.artstation.com/p/assets/images/images/048/982/692/large/michal-kvac-blooming-trees-small.jpg') center/1536px no-repeat;
+        filter: hue-rotate(0deg) saturate(1) contrast(0.8);
+        box-shadow: inset 0 0 12px #000;
+        z-index: -1;
+    }
+
+    #art {
+        /*! position: absolute; */
+        /*! inset: 0px auto auto calc(50% - 150px); */
+        /*! z-index: 1; */
+        background: pink url('https://cdn.discordapp.com/attachments/1461738385260679198/1494247617570537472/dju0cjs-feee6306-05e4-4a34-a563-6e4a55e9d8c0.png?ex=69e1ea09&amp;is=69e09889&amp;hm=a36a53cab6b4d8c404a4b4c40074444ab871568ab14338a3f1d258409d515e66&amp;)') center / 260px no-repeat;
+        width: 300px;
+        height: 300px;
+        margin: 20px auto;
+        border-radius: 50%;
+    }
+
+    #cont {
+        padding: 40px;
+        border: 2px solid;
+        border-image: var(--border-gradient) 1;
+        background: #ddd;
+        text-align: justify;
+        font: 13px 'tipofila';
+        color: #222;
+        box-shadow: 0 0 14px #000A, inset 0 0 30px #EEB098;
+        position: relative;
+    }
+}
+
+@keyframes rotate-border {
+    0% {
+        --border-offset: 0deg;
+    }
+
+    100% {
+        --border-offset: 360deg;
+    }
+}
