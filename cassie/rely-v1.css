@@ -1,5 +1,5 @@
 .dsl-cassie-rely-v1 {
-  --speak-color: #962cff;
+  --speech-color: #962cff;
   position: relative;
   width: 540px;
   margin: 40px auto;
@@ -11,7 +11,7 @@
     
   b {
     font-weight: normal;
-    color: var(--speak-color);
+    color: var(--speech-color);
   }
   
   >div {
