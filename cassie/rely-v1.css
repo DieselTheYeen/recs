@@ -1,32 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
-
 .dsl-cassie-rely-v1 {
-  --speak-color: #64bf99;
+  --speak-color: #962cff;
   position: relative;
-  width: 500px;
+  width: 540px;
   margin: 40px auto;
   padding: 10px 30px 30px;
-  background: linear-gradient(#364958 calc(50% - 540px), #0000 calc(50% - 440px),#0000 calc(100% - (50% - 440px)), #06090E calc(100% - (50% - 540px))), url('https://cdnb.artstation.com/p/assets/images/images/012/138/145/large/max-suleimanov-dv-141.jpg') 80%/1920px no-repeat;
+  background: linear-gradient(#674c82 calc(50% - 510px), #0000 calc(50% - 400px),#0000 calc(100% - (50% - 460px)), #06090E calc(100% - (50% - 500px))), url('https://cdnb.artstation.com/p/assets/images/images/073/396/833/large/michal-kvac-a-pile-of-stones-small.jpg') 80%/1536px no-repeat;
   border: 3px solid;
-  border-image: linear-gradient(125deg, #faf7eb, #f0dc91, #daa661) 1;
+  border-image: linear-gradient(125deg, #ebeffa, #aa91f0, #f0bb90) 1;
   box-shadow: 0 30px 40px #000, inset 0 0 40px #000;
-  font: 13px 'Winky Rough';
     
   b {
-    font: 13px 'Amarante';
+    font-weight: normal;
     color: var(--speak-color);
-    text-shadow: 0 0 4px #FFF;
   }
   
   >div {
     padding: 20px;
     text-align: justify;
     color: #3F3F3F;
-    background: #FFF9F1;
-    box-shadow: 0 0 20px #000, inset 0 0 60px #8f774abf, inset 0 0 10px;
+    background: #F2F1FF;
+    box-shadow: 0 0 20px #000, inset 0 0 60px #4a758fbf, inset 0 0 10px;
     border: 3px solid;
-    border-image: linear-gradient(125deg, #faf7eb, #f0dc91, #daa661) 1;
+    border-image: linear-gradient(125deg, #ebeffa, #aa91f0, #f0bb90) 1;
   }
   
   &::after {
@@ -38,9 +33,8 @@
   hr {    
   display: inline-block;
   width: 100%;
-  height: 20px !important;
+  height: 50px !important;
   margin: 4px 0 22px;
-  background: url('https://svgsilh.com/svg/2154993-e5c179.svg') center/280px no-repeat;
-  rotate: 180deg;
+  background: url('https://svgsilh.com/svg/1751088-383838.svg') center/280px no-repeat;
   }
 }
