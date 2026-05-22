@@ -4,7 +4,7 @@
   width: 540px;
   margin: 40px auto;
   padding: 10px 30px 30px;
-  background: linear-gradient(#674c82 calc(50% - 510px), #0000 calc(50% - 400px),#0000 calc(100% - (50% - 460px)), #06090E calc(100% - (50% - 500px))), url('https://cdnb.artstation.com/p/assets/images/images/073/396/833/large/michal-kvac-a-pile-of-stones-small.jpg') 80%/1536px no-repeat;
+  background: linear-gradient(#16001c calc(50% - 1100px), #674c82 calc(50% - 510px), #0000 calc(50% - 400px),#0000 calc(100% - (50% - 460px)), #06090E calc(100% - (50% - 500px))), url('https://cdnb.artstation.com/p/assets/images/images/073/396/833/large/michal-kvac-a-pile-of-stones-small.jpg') 80%/1536px no-repeat;
   border: 3px solid;
   border-image: linear-gradient(125deg, #ebeffa, #aa91f0, #f0bb90) 1;
   box-shadow: 0 30px 40px #000, inset 0 0 40px #000;
