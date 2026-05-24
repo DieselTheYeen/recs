@@ -1,0 +1,68 @@
+body {
+  background-position: top;
+  background-attachment: fixed;
+}
+
+.profinfowrap, .profav, .profinfo.blocky, .blocky:has(.ayato-panel-selector) {
+    border: 42px solid transparent;
+    border-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%2240%22%20height%3D%2240%22%20fill%3D%22none%22%3E%3Cpath%20stroke%3D%22%23b0453a%22%20stroke-width%3D%221%22%20d%3D%22M1%201h9V7h3V1H27V7h3V1h9v9H33v3h6V27H33v3h6v9H30V33H27v6H13V33H10v6H1V30H7V27H1V13H7V10H1ZM4%204H36V36H4ZM4%207H7V4m9-3V4m8-3V4m9%200V7h3m0%209h3m-3%208h3m-3%209H33v3m-9%200v3m-8-3v3M7%2036V33H4m0-9H1m3-8H1%22%2F%3E%3C%2Fsvg%3E') 18 stretch;
+    background-color: #0f1414cc;
+}
+
+#content table, #content .footer {
+    background-color: #0f1414cc;
+}
+
+.blocky {
+  background-color: transparent;
+}
+
+.profinfowrap .profinfo .blocky {
+  text-align: center;
+  border-width: 0px;
+  border-color: #b0453aff;
+  border-style: solid;
+  border-top-width: 2px;
+  border-left-width: 30px;
+}
+
+.profinfowrap .profinfo .blocky span {
+  display: none;
+}
+
+.profinfowrap .profinfo .blocky a span {
+  display: unset;
+}
+
+.profinfowrap .profinfo .blocky:before { 
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  color: black;
+  line-height: 12px;
+  letter-spacing: -5px;
+  font-family: Redressed;
+  height: 100%;
+  width: 30px;
+  align-content: center;
+}
+
+.profinfowrap .profinfo:nth-child(1) .blocky:nth-child(1):before {content: 'Full Name';}
+.profinfowrap .profinfo:nth-child(1) .blocky:nth-child(2):before {content: 'NIck Name';}
+.profinfowrap .profinfo:nth-child(1) .blocky:nth-child(3):before {content: 'Age';}
+.profinfowrap .profinfo:nth-child(1) .blocky:nth-child(4):before {content: 'DOB'; letter-spacing: -1px;}
+.profinfowrap .profinfo:nth-child(3) .blocky:nth-child(1):before {content: 'Size';}
+.profinfowrap .profinfo:nth-child(3) .blocky:nth-child(2):before {content: 'Height'; font-size: 0.9em;}
+.profinfowrap .profinfo:nth-child(3) .blocky:nth-child(3):before {content: 'Build';}
+.profinfowrap .profinfo:nth-child(3) .blocky:nth-child(4):before {content: 'Align ment';}
+.profinfowrap .profinfo:nth-child(5) .blocky:nth-child(1):before {content: 'Gend';}
+.profinfowrap .profinfo:nth-child(5) .blocky:nth-child(2):before {content: 'Sexua lity';}
+.profinfowrap .profinfo:nth-child(5) .blocky:nth-child(3):before {content: 'Pack';}
+.profinfowrap .profinfo:nth-child(5) .blocky:nth-child(4):before {content: 'Rank';}
+.profinfowrap .profinfo:nth-child(7) .blocky:nth-child(1):before {content: 'Posts';}
+.profinfowrap .profinfo:nth-child(7) .blocky:nth-child(2):before {content: 'Gems';}
+.profinfowrap .profinfo:nth-child(7) .blocky:nth-child(3):before {content: 'Log';}
+.profinfowrap .profinfo:nth-child(7) .blocky:nth-child(4):before {content: 'Player'; font-size: 0.8em;}
+
