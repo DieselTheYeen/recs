@@ -2,6 +2,9 @@
   .panel {
     outline: 1px dashed grey;
   }
+  .contract {
+    flex: 0 0 300px;
+  }
   .contracat h3 {
     color: gold;
   }
