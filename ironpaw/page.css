@@ -1,0 +1,8 @@
+.ironpaw {
+  .panel {
+    outline: 1px dashed grey;
+  }
+  .contracat h3 {
+    color: gold;
+  }
+}
