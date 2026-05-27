@@ -1,11 +1,26 @@
 .ironpaw {
   .panel {
     outline: 1px dashed grey;
+    margin: 0px;
+    background: #0008;
+    border-radius: 0px;
   }
   .contract {
     flex: 0 0 300px;
+    min-height: 400px;
+    text-align: justify;
+    padding: 1em;
+    position: relative;
   }
   .contract h3 {
     color: gold;
+    text-align: center;
+  }
+  .contract button {    
+    display: block;
+    position: absolute;
+    inset: auto auto 0px calc(50% - 65px);
+    width: 130px;
+    height: 28px;
   }
 }
