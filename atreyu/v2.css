@@ -1,1 +1,12 @@
-
+.dsl-ayu-v2 {
+  b, .mycode_b {
+    color: #628c00;
+    font-weight: normal;
+  }
+  hr {
+    background: url('https://svgsilh.com/svg/3166168-6a8c1c.svg') center/180px no-repeat;
+    margin: 6px auto;
+    height: 20px !important;
+    width: 70%;
+  }
+}
