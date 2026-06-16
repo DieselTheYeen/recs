@@ -1,3 +1,15 @@
 .dsl-atreyu-v3 {
-  outline: 1px solid grey;
+  outline: 4px solid grey;
+  position: relative;
+  min-height: 300px;
+  width: 640px;
+  margin: auto;
+
+  bdr {
+    position: absolute;
+    inset: -20px;
+    background: linear-gradient(to bottom, #dbdbdb, #f9f9f9, #dbdbdb) fixed;
+    --corner-size: 100px;
+    mask: no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tr.svg') top right/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-br.svg') right bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tl.svg') left top/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-bl.svg') left bottom/var(--corner-size)
+  }
 }
