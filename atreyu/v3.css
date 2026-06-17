@@ -7,7 +7,7 @@
     min-height: 330px;
     width: 640px;
     margin: 160px auto 40px;
-    padding: 80px 30px 30px;
+    padding: 80px 30px 40px;
     border-image: var(--gold-gradient) 1;
     backdrop-filter: blur(4px);
     background: #0004;
@@ -16,6 +16,9 @@
     text-align: justify;
     font: 15px "Amarna";
     text-shadow: 1px 2px 0px #0006;
+    
+    
+    
     
     .art {
         position: absolute;
@@ -42,7 +45,7 @@
 .dsl-atreyu-v3::after {
     content: 'Code by Diesel ♥';
     position: absolute;
-    inset: auto 0px;
+    inset: auto 0px 10px;
     text-align: center;
     width: 100%;
     color: #FFFA;
