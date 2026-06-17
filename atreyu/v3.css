@@ -13,14 +13,14 @@
     color: #fffe;
     filter: drop-shadow(0px 0px 6px #000A);
     text-align: justify;
-    font: 16px "Amarna";
+    font: 15px "Amarna";
     text-shadow: 1px 2px 0px #0006;
     .art {
         width: 400px;
         height: 110px;
         position: absolute;
         inset: -56.5px calc(50% - 200px) auto auto;
-        background: radial-gradient(#0000 50%, #000F), url('https://ik.imagekit.io/dzl/atreyu/avatar01.png?tr=w-240') left center/200px no-repeat, var(--gold-gradient);
+        background: radial-gradient(#0000 50%, #0004), url('https://ik.imagekit.io/dzl/atreyu/avatar01.png?tr=w-240') left center/200px no-repeat, var(--gold-gradient);
         border-radius: 0%;
         clip-path: polygon(0 50%, 40px 0, calc(100% - 40px) 0, 100% 50%, calc(100% - 40px) 100%, 40px 100%);
         padding: 10px;
