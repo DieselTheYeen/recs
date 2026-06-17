@@ -22,7 +22,7 @@
     
     .art {
         position: absolute;
-        inset: -140px calc(50% - 120px) auto auto;
+        inset: -152px calc(50% - 120px) auto auto;
         width: 260px;
         height: 260px;
         background: url('https://ik.imagekit.io/dzl/atreyu/avatar01.png?tr=w-260') center/100% no-repeat;
