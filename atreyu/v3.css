@@ -30,7 +30,7 @@
         inset: -20px;
         background: var(--gold-gradient) fixed;
         --corner-size: 100px;
-        mask: no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tr.svg') top right/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-br.svg') right bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tl.svg') left top/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-bl.svg') left bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/8103125.svg') bottom center/240px;
+        mask: no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tr.svg') top right/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-br.svg') right bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tl.svg') left top/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-bl.svg') left bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/8103125.svg') bottom center/calc(var(--corner-size) + 140px);
         z-index: -3;
     }
 
@@ -63,4 +63,28 @@
     background: url('https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=80&w=2000');
     filter: blur(1px);
     z-index: -1;
+}
+
+@media(max-width: 1200px) {
+    div>.dsl-atreyu-v3
+    {
+        border: 1px solid transparent !important;
+        border-image: var(--gold-gradient) 1 !important;
+        padding: 20px !important;
+        margin-top: 260px !important;
+        bdr {
+            --corner-size: 50px;
+            inset: 0px;
+            mask: no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tr.svg') top right/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-br.svg') right bottom/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-tl.svg') left top/var(--corner-size), no-repeat url('https://dieseltheyeen.github.io/recs/generic/2351739-bl.svg') left bottom/var(--corner-size);
+        }
+        .art {
+            position: absolute;
+            width: 100% !important;
+            background: url('https://ik.imagekit.io/dzl/atreyu/avatar01.png?tr=w-260') center/260px no-repeat !important;
+            inset: -260px 0px auto;
+        }
+    }
+    .postwrap.fill:has(.dsl-atreyu-v3)::before {
+        background: none;
+    }
 }
