@@ -1,17 +1,45 @@
-.dsl-atreyu-v4 {
-  outline: 1px dashed pink;
+.actual_post .dsl-atreyu-v4 {
   position: relative;
   width: 720px;
-  margin: auto;
+  max-width: 720px;
+  margin: auto !important;
   display: flex;
   flex-direction: column;
+  padding: 10px  !important;
+  background: linear-gradient(-45deg, #e7abd7, #ac7fd4) !important;
+  box-shadow: 0 6px 20px #000;
+  
+  b, .mycode_b {
+    color: #ff8b9f;
+  }
 
   top {
-    height: 160px;
-    background: #F004;
+    height: 120px;
+    background: url('https://ik.imagekit.io/arl60/Ardent/shop/Bird/Atreyu/atreyumanip.jpg?tr=w-740') center 0px;
+    h1, h2 {text-align: center; margin: 0px;color: #FFFD; text-transform: uppercase;}
+    h1 {font: 60px ""}
+    h2 {font: 30px ""}
+  }
+  top::before, top::after {
+    content: '-✿-';
+    font: 70px "";
+    color: #FFFD;
+    position: absolute;
+    top: 28px;
+    left: 70px;
+  }
+  top::after {
+    left: auto;
+    right: 70px;
+  }
+  cont {
+    background: #fefefe;
+    padding: 1em;
+    text-align: justify;
+    color: #000A;
   }
   bot {
     height: 260px;
-    background: #F0F4;
+    background: url('https://ik.imagekit.io/arl60/Ardent/shop/Bird/Atreyu/atreyumanip.jpg?tr=w-740') center;
   }
 }
