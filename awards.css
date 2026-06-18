@@ -1,4 +1,11 @@
+/* Apply to all award blocks */
 .da-awards {
-  outline: 1px dashed red;
+  outline: 1px dashed magenta;
   display: block;
+  height: 50px;
+}
+
+/* Override for user 6022 */
+.postwrap:has(a[href$="6022"]) .da-awards {
+  outline: 1px dashed magenta;
 }
