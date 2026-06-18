@@ -1,3 +1,17 @@
 .dsl-atreyu-v4 {
   outline: 1px dashed pink;
+  position: relative;
+  width: 720px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  top {
+    height: 160px;
+    background: #F004;
+  }
+  bot {
+    height: 260px;
+    background: #F0F4;
+  }
 }
