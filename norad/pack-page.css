@@ -1,1 +1,17 @@
 .theme {outline: 1px dashed rebeccapurple;}
+
+details {
+  background: #00809e;
+  min-height: 40px;
+  border-radius: 10px;
+}
+
+summary {
+  background: #00add4;
+  height: 30px;
+  border-radius: 10px 10px 0px 0px;
+  line-height: 26px;
+}
+summary:marker {
+  display: none;
+}
