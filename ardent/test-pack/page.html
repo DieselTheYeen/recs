@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><!-- start: Packs -->
+
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><!-- start: headerinclude -->
+<link rel="alternate" type="application/rss+xml" title="Latest Threads (RSS 2.0)" href="https://www.ardently.org/syndication.php" />
+<link rel="alternate" type="application/atom+xml" title="Latest Threads (Atom 1.0)" href="https://www.ardently.org/syndication.php?type=atom1.0" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<script type="text/javascript" src="https://www.ardently.org/jscripts/jquery.js?ver=1820"></script>
+<script type="text/javascript" src="https://www.ardently.org/jscripts/jquery.plugins.min.js?ver=1820"></script>
+<script type="text/javascript" src="https://www.ardently.org/jscripts/general.js?ver=1820"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="https://www.ardently.org/jscripts/binder.js?v=1"></script>
+
+<link type="text/css" rel="stylesheet" href="https://www.ardently.org/cache/themes/theme27/css3.css?t=1704585816" />
+<link type="text/css" rel="stylesheet" href="https://www.ardently.org/css.php?stylesheet%5B0%5D=135&stylesheet%5B1%5D=85&stylesheet%5B2%5D=270&stylesheet%5B3%5D=84&stylesheet%5B4%5D=87&stylesheet%5B5%5D=220" />
+<!-- start: ougcawards_js -->
+<script type="text/javascript" src="https://www.ardently.org/jscripts/ougc_awards.js"></script>
+<!-- end: ougcawards_js --><script src="https://www.ardently.org/jscripts/posttemplates.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+<script type="text/javascript">
+<!--
+	lang.unknown_error = "An unknown error has occurred.";
+
+	lang.select2_match = "One result is available, press enter to select it.";
+	lang.select2_matches = "{1} results are available, use up and down arrow keys to navigate.";
+	lang.select2_nomatches = "No matches found";
+	lang.select2_inputtooshort_single = "Please enter one or more character";
+	lang.select2_inputtooshort_plural = "Please enter {1} or more characters";
+	lang.select2_inputtoolong_single = "Please delete one character";
+	lang.select2_inputtoolong_plural = "Please delete {1} characters";
+	lang.select2_selectiontoobig_single = "You can only select one item";
+	lang.select2_selectiontoobig_plural = "You can only select {1} items";
+	lang.select2_loadmore = "Loading more results&hellip;";
+	lang.select2_searching = "Searching&hellip;";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\" colspan=\"2\"><strong>__message__</strong></td>\
+			</tr>\
+			<tr>\
+				<td colspan=\"2\" class=\"trow1\">\
+				<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div></td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var modal_zindex = 9995;
+	var cookieDomain = ".ardently.org";
+	var cookiePath = "/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "1";
+	var deleteevent_confirm = "Are you sure you want to delete this event?";
+	var removeattach_confirm = "Are you sure you want to remove the selected attachment from this post?";
+	var loading_text = 'Loading. <br />Please Wait&hellip;';
+	var saving_changes = 'Saving changes&hellip;';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "1e24c637759fd5f7344099b5afbb52e5";
+	var rootpath = "https://www.ardently.org";
+	var imagepath = "https://www.ardently.org/images";
+  	var yes_confirm = "Yes";
+	var no_confirm = "No";
+	var MyBBEditor = null;
+	var spinner_image = "https://www.ardently.org/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	
+// -->
+</script>
+
+<script type="text/javascript">
+	/*Changed the above html code with few id and classes. keep note*/
+$('document').ready(function(){
+if(window.innerWidth <= 768){ //Checking the maximum size to be for mobiles only [You may increase for tablet sizes]
+		
+    $("<div id='tab_Introduction'></div>" ).insertAfter(".Introduction");
+	  $('#tab_Introduction').append( $('#contentTabs'));
+    /* Above manually adding a fiv after introduction to show the first content on load.*/
+		$('.navigation-tabs li').click(function(){
+  			var currentTab = $(this).attr('class');  
+        //Listening to the clicked tab link and get its class which ive added andthen assign a new div under it with id "tab_classname" to add the content of that div
+				$( "<div id='tab_"+currentTab+"'></div>" ).insertAfter("."+currentTab );
+	      $('#tab_'+currentTab+'').append( $('#contentTabs'));
+        // Added the content of the div using append and took contents of the contentTabs 
+        // Below to finalise, ive added an animate to make sure it always scroll to heading top.
+        $('html, body').animate({
+        	scrollTop: $('#contentTabs').offset().top - 50
+        },1000);
+  });
+}
+});
+</script>
+<!-- end: headerinclude --></head>
+<body><!-- start: header -->
+<a name="top" id="top"></a>
+<!-- <link href="https://fonts.googleapis.com/css?family=Mr+Dafoe&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Redressed&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7ac37eb1b9.js" crossorigin="anonymous"></script>
+<link rel="canonical" href="https://www.ardently.org/">
+<meta property="og:description" content="  " />
+<meta name= "description" content="Ardent is a semi-realistic wolf RPG forum with a flexible 100-word post minimum, offering creative freedom and diverse character opportunities for all players.">
+
+
+
+
+
+
+<!-- Desktop browsers (including 16x6, 32x32 & 48x48 PNGs)  -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon-16x16.png" sizes="16x16">
+<link rel="icon" href="favicon-32x32.png" sizes="32x32">
+<link rel="icon" href="favicon-96x96.png" sizes="96x96">
+<link rel="manifest" href="/manifest.json">
+
+<body>
+	
+	
+
+<nav>
+	
+	
+	
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar9">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      
+      <div id="navbar9" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+			<li><a href="#"><i class="fa-solid fa-paw-claws"></i></a></li>
+			<!-- start: nav -->
+<!-- start: nav_bit -->
+<li><a href="https://www.ardently.org/index.php">Ardent Wolf RPG</a></li>
+<!-- end: nav_bit --><!-- start: nav_sep_active -->
+
+<!-- end: nav_sep_active --><!-- start: nav_bit_active -->
+
+<!-- end: nav_bit_active -->
+<!-- end: nav -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">	
+						
+			
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Resources <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="guidebook.php">Guidebook</a></li>
+			  <li><a href="knowledge.php">Knowledge Base</a></li>
+				<li><a href="posting-table-generator.html" target="_blank">Post Table Generator</a></li>
+			  <li><a href="map.html" target="_blank">World Map</a></li>	
+				
+            </ul>
+          </li>
+			
+			  <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Directory <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+			  <li><a href="players.php">Player Database</a></li>
+              <li><a href="https://www.ardently.org/memberlist.php">Member List</a></li>
+			  <li><a href="packs.php">Packs and Bands</a></li>
+			  <li><a href="alpha_checks.php">Alpha / Band Leader Activity</a></li>	
+			  <li><a href="showthread.php?tid=8393">Absences/Scarcities</a></li>
+            </ul>
+          </li>
+			
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maintenance <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="forumdisplay.php?fid=9">Approvals</a></li>
+              <li><a href="showthread.php?tid=45487">Maintenance Requests</a></li>
+              <li><a href="showthread.php?tid=7638">Judgement Requests</a></li>
+              <li><a href="forumdisplay.php?fid=241">Suggestions</a></li>
+            </ul>
+          </li>
+			
+			 <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Threads <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+			  <li><a href="allwelcome.php">All Welcome Threads</a></li>
+			  <!--<li><a href="event.php">Event Threads</a></li>-->
+			 <li><a href="randomevents.php">Random Event Threads</a></li>
+				<li><a href="/guidebook.php?page=Skill Locked Lands">Skill Locked Lands</a></li>
+            </ul>
+          </li>
+			
+			<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+			  <li><a href="index.php?action=sip_shop_listing">Gemstone Store</a></li>
+				<li><a href="index.php?action=sip_inventory_listing">Inventory Listing</a></li>
+			  <li><a href="https://ko-fi.com/ardentwolfrpg">Donation Rewards</a></li>
+			  <li><a href="item-compendium.php">Item Compendium</a></li>
+			  <li><a href="https://www.redbubble.com/people/ardent-wolfrpg/shop">Merch</a></li>
+            </ul>
+          </li>		
+			
+			<li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Skills <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+			  <li><a href="index.php?action=rpgsk_skill_points_actions_listing">Skill Claims</a></li>
+				<li><a href="index.php?action=rpgsk_skill_points_user_actions_listing">Skill Claims Log</a></li>
+              <li><a href="guidebook.php?page=Skills and Specialties">Skills & Specialties</a></li>
+			  <li><a href="showthread.php?tid=57621">Seasonal Skill Prompts</a></li>
+            </ul>
+          </li>		
+
+			<!-- start: header_welcomeblock_member -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Player <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+				<li><a href="member.php?action=profile&uid=0001" title="Player">View Profile</a></li>
+
+				<li><a href="https://www.ardently.org/misc.php?action=threadlog&uid=0001">Threadlog</a></li>
+				<li><a href="https://www.ardently.org/search.php?action=getnew">View New Posts</a></li>
+				<li><a href="https://www.ardently.org/search.php?action=getdaily">View Today's Posts</a></li>
+				
+				<li><a href="https://www.ardently.org/private.php">Private Messages</a></li>		
+				<!-- start: header_welcomeblock_member_user -->
+<li><a href="https://www.ardently.org/usercp.php" class="usercp">User CP</a></li>
+<!-- end: header_welcomeblock_member_user -->
+				<li><a href="https://www.ardently.org/member.php?action=logout&amp;logoutkey=7d29cb6a3b99b47f08aa5576b62a68b0" class="logout">Log Out</a></li>
+            </ul>
+          </li>
+
+<!-- start: accountswitcher_header_dropdown -->
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Switch <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+            </ul>
+          </li>
+
+
+
+
+            <script>
+                <!--
+                    $("#accountswitcher_header").on("click", function(e) {
+                        $("#accountswitcher_header_popup").show();
+                        e.stopPropagation();
+                    });
+                    $("#accountswitcher_header_popup").on("click", function(e) {
+                        e.stopPropagation();
+                    });
+                    $(document).on("click", function() {
+                        $("#accountswitcher_header_popup").hide();
+                    });
+                -->
+            </script>
+<!-- end: accountswitcher_header_dropdown -->
+<!-- end: header_welcomeblock_member --> 
+			
+        </ul>
+      </div>
+	</nav>
+	
+
+<header>
+  <div class="title">ardent</title>
+</header>
+
+	<div id="content">
+	 
+	
+	
+	
+	
+	
+	
+	
+	
+<!-- end: header -->
+        <noscript>
+            <p style="font-weight: bold; font-size: 1.2em;">Your browser has JavaScript disabled. If you would like to use all features of this site, it is mandatory to enable JavaScript.</p>
+        </noscript>
+        
+<style>
+ #packpost input, #packpost textarea { margin: 0 0 1rem }
+ .packbanner h2 { text-transform: none }
+ small { color: inherit }
+ .packwrap input, .packwrap textarea { width: 100% } .packwrap .button { width: auto!important }
+ .packwrap textarea { min-height: 150px }
+ .packbanner { padding: 3rem; margin: 0 0 1rem; text-align: center; color: #fff } .packbanner h1 { text-transform: none }
+ .packbanner h2 { margin: 0 }
+ .packwrap summary { cursor: pointer; display: list-item; text-transform: uppercase; font-weight: bold }
+ .packwrap .postwrap { margin: 0 }
+ .packwrap form { display: inline } .packwrap small { text-transform: uppercase }
+ .postwrap { background: none }
+ .land span { color: inherit }
+ span a { text-shadow: none!important }
+ .packbanner>* { color: #fff!important }
+
+ /* optional preview niceties */
+ #pack-preview { border-radius: 8px; border:1px dashed rgba(255,255,255,.25); padding:1rem; margin-bottom:1rem }
+ #pack-preview .packbanner { margin-top: 0; }
+</style>
+
+<div class="packwrap">
+<title>Ardent Wolf RPG - Norad</title><style>.thead { background-color: #00add4; color: #fff }html, body { 
+            background: url('https://www.ardently.org/images/lands/133.jpg') center / cover no-repeat fixed !important;
+          }body:before, body:after {
+            background-image: url('https://www.ardently.org/images/lands/133.jpg') !important;
+            background-size: cover !important;
+            background-position: 50% 50% !important;
+            background-repeat: no-repeat !important;
+          }header { background: none }.thead { background-image: none !important; }#content { background: #3c404f }
+              ::-webkit-scrollbar, ::-webkit-scrollbar-thumb { border-color: #3c404f }#content, .thead { color: #b6d0f2 }a, input.button, summary { color: #bfccff!important; text-shadow: none!important }
+              input.button { border: 1px solid #bfccff; background: none }h2, a:hover, summary:hover, header .title, input.button:hover { color: #020e38!important; }
+          input.button:hover { border: 1px solid #020e38!important; background: none; }</style><div style="text-align: right"><a href="packs.php"><small>VIEW ALL PACKS & BANDS</small></a></div><div class="thead packbanner"><h1>Norad</h1><h2>Guard your heart, protect your peace, know your worth.</h2></div><p><center>Lawful Nuetral</center><br />
+A peaceful pack that promotes a mindset of community. We welcome all and focus on our communal needs as a whole. We are all a part of the whole and we need each member to do thier part. Every member makes us stronger together. To be part of Norad is to be welcomed into a family!</p><div class="flex fill"><div><h2>Territories</h2> <ul><li class="land"><a href="forumdisplay.php?fid=133"><span class="userhtml"><i class="fa-solid fa-paw Norad"></i> The God's Garden</span></a></li><li class="land"><a href="forumdisplay.php?fid=144"><span class="userhtml"><i class="fa-solid fa-paw Norad"></i> Cedar Falls</span></a></li></ul></div></div><div><h2>Former Leaders</h2><ul><li><a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><a href="https://www.ardently.org/member.php?action=profile&amp;uid=5321">Eltrys</a></li></ul></div></div><div class="flex fill"><div><h2>General Rules</h2><div class="userhtml"><li>Norad welcomes all, regardless of lineage, history, or alignment. <br />
+<i>We would like to see one post a week from our members at least!</i><br />
+<br />
+<li>The word of the Artifex is law. They have the final say in the pack.<br />
+<br />
+<li>Treat your fellow pack members with respect, regardless of differences.<br />
+<i>You may not all get along, but respect must be upheld even as you aim to settle differences with a fight.</i><br />
+<br />
+<li>Harming or maiming a fellow pack member, ally, or guest is grounds for treason. <br />
+<i>Treasonous actions will be met with either expulsion or, in very rare cases, imprisonment.</i><br />
+<br />
+<li>Reproduction is not allowed without the consent of the Artifex. <br />
+<i>Please take care to reproduce responsibly so we can keep an eye on our population limit.<br />
+Reproduction Persmissions: <b>please DM Asena on discord to ask for permission</b></i><br />
+<br />
+<li>Do not cause trouble with other packs. <br />
+<i>You are responsible for your behavior, and the Artifex will not save you from the consequences of your actions. Depending on the level of trouble, it might even be grounds for treason. </i><br />
+<br /></li><br  /><br />
+<h2>Raid history</h2><br />
+Defenders vs attacking side - <b>win/loss</b><br />
+<li> <a href=https://www.ardently.org/showthread.php?tid=51821>Norad vs Douðar Orð</a> -<a href=https://www.ardently.org/showthread.php?tid=51822&pid=327418#pid327418><b>Loss</a></b><br />
+<li><a href=https://www.ardently.org/showthread.php?tid=52758>Norad vs Obscura</a> - <b><a href=https://www.ardently.org/showthread.php?tid=52766> Loss</a></b><br />
+<li><a href=https://www.ardently.org/showthread.php?tid=53488>Norad vs Vardaan</a> - <a href=https://www.ardently.org/showthread.php?tid=53488&pid=365439#pid365439> <b>Loss</a></b><br />
+<li><a href=https://www.ardently.org/showthread.php?tid=54355>Elysium vs Norad</a> - <b><a href=https://www.ardently.org/showthread.php?tid=54384>Loss</a></b><br />
+<li><a href=https://www.ardently.org/showthread.php?tid=55707&pid=383982#pid383982>Norad vs Valhalla</a> - <b>Loss</b><br />
+<li><a href=https://www.ardently.org/showthread.php?tid=56940&pid=391055#pid391055>Arcadia vs Norad</a> - <b>Loss</b><br />
+<br />
+<li><https://www.ardently.org/showthread.php?tid=57755&pid=395975#pid395975>Norad vs Romalia</a> - <b>ongoing</b><br />
+<br />
+<br><br></br></br><br />
+<h2> Disciples and Mentors</h2><br />
+Sabbath - Haydee/Bellatrix<br />
+Rowan - Eltrys<br /></div></div><div class="userhtml"><h2>Ceremonies and Festivals</h2><br />
+<li>Ceremony of Matrimony - A three day long celebration! The first day begins with two groups for two large hunts beginning at dawn(2-6 characters per thread). The couple is separated and placed in each group as the leader. One group must hunt for the feast, the other group may choose to hunt prey, or collect resources like decorations for the party. Whoever finishes their thread first (3 rounds for each member of the group) wins a Small Accessory (of their choice!)! The first day ends with a small party for the happy couple and the winners. The second day is the ceremony! The Artifex will tie the couple's front paws together with a ribbon or chord under a natural arch of thier choice. Then the couple will speak thier vows over the tie that binds them, then kiss. After the kiss, the feast starts! Allies and friends of Norad are welcome to join the feast. It is customary to bring gifts for the couple and place them in a pile next to the entrance of their home. A bonfire is set in the middle of the village where the revelers can partake in drinking, singing, toasts, feasting, dancing, and stories together well into the third day. The last of the guests to wake the next day is said to be cursed with bad luck for three days! So rise and shine when you can!<br /><br />
+<li>New life celebration - a celebration to honor the new life brought into the world! It usually takes place a week before a female is due. Games are played, such as a guessing game to guess how many babies will be born. No alcohol will be served here, and males will typically be shooed off. A small lunch is usually served before it's ended. Allies and friends may attend by invitation of the mother-to-be. Gifts are not customary but are welcome for the soon-to-be mother. <br /><br />
+<li>Craft fair - a market style festival held every summer in the village, all are welcome to display wares in a stall and buy and trade wares from others. Allies and friends are welcome to attend as well as to have their own stall set up. There are usually food stalls and drink stalls as well. The Artifex welcomes and encourages wolves of Norad to display their wares and crafts for our allies to peruse and barter for. Stalls are limited to a large pelts. Depending on how the year has been there may even be excess livestock for trade at the Artifex's home.<br />
+<br />
+<br />
+<h2>Our Trades and Livestock</h2><br />
+<table style="width:100%;"><div align="justify"><tbody>
+<tr style="vertical-align:top;">
+<td style="width:33%;">Livestock<br />
+<ul>
+<li>Quail</li>
+<li>Pygmy Hogs</li>
+<li>Chickens</li>
+<li>Muscovy Ducks</li>
+</ul>
+</td>
+<td style="width:33%;">Crafts<br />
+<ul>
+<li>Leather Armor</li>
+<li>Cedar and reed baskets</li>
+<li>Quail and Duck Down</li>
+<li>Fish Traps</li>
+<li>Clay pots</li>
+<li>Various leather</li>
+<li>Fish bone needles</li>
+</ul>
+</td>
+<td style="width:33%;">Herbs and Spices<br />
+<ul>
+<li>Elderberry, Oregano, Thyme</li>
+<li>Ginger, Turmeric, Clove, Black Pepper</li>
+<li>Sage, Hibiscus, Cinnamon, Jasmine</li>
+<li>Cammomile, Lemon Balm, etc.</li>
+</ul>
+</td></tr>
+<tr>
+<td style="width:33%;">Prey<br />
+<ul>
+<li>Opposums, Okapi, Takin (fall and winter)</li>
+<li>Tapir, Water buffalo, Wild Boar</li>
+<li>South porcupine, Lemurs, Monkeys</li>
+</ul>
+</td>
+<td style="width:33%;">Prey/ Birds<br />
+<ul>
+<li>Peafowl, Parrots, Vulture</li>
+<li>Toucans, Emu, Magpie</li>
+<li>Eagles, Hawks, Sparrows</li>
+<li>Ducks, Song Birds, Storks, Fishers</li>
+</ul>
+</td>
+<td style="width:33%;">Predators<br />
+<ul>
+<li>Fossa, Bengal Tigers, Hippo,</li>
+<li>Leopards, Secretary bird, Cassowary,</li>
+<li>Apes, Large Bears</li>
+</ul>
+</td></tr></tbody></div></table></div></div><h2>News</h2><ul><li><b>2026-05-15</b> Arcadia is hosting their <a href=https://www.ardently.org/showthread.php?tid=57819>Summer Bonfire Festival</a>! Norad is invited but Bellatrix asks that you each remain on your best behavior. &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><b>2025-09-24</b> We welcome 5 new children as the future of Norad, born to Mae and Phobia <a hrefhttps://www.ardently.org/showthread.php?tid=54676>here</a> &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><b>2025-09-06</b> Bellatrix holds a Raid meeting to discuss our upcoming <a href=https://www.ardently.org/showthread.php?tid=54240>practice raid</a> &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><b>2025-05-15</b> Eltrys presides over Norad while Bellatrix tends to her pups, Rowan and Sabbath!  &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5321">Eltrys</a></li><li><b>2025-04-12</b> Haydee is hosting a <a href=https://www.ardently.org/showthread.php?tid=52228>fight training</a> &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><b>2025-04-12</b> A <a href=https://www.ardently.org/showthread.php?tid=52157>mandatory meeting</a> is being held &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li><li><b>2024-12-27</b> Bellatrix wins her challenge vs Widow and claims the Gods Garden, forming Norad and inviting those that wish to speak with her to find her in The Garden. &ndash; <a href="https://www.ardently.org/member.php?action=profile&amp;uid=5024">Bellatrix</a></li></ul><h2>Relations</h2><ul><li><i class="fa-solid fa-paw-claws Arcadia"></i> <b><a href="packs.php?pack=5">Arcadia</a></b> &ndash; Allies<br>Our longest standing allies. Their members may enter the gardens as long as a call is given at the borders first. Members are encouraged to interact with them and build their own bonds together.</li><li><i class="fa-solid fa-paw-claws Blackwell"></i> <b><a href="packs.php?pack=43">Blackwell</a></b> &ndash; Neutral<br>Bellatrix has no knowledge of this pack or their founding.</li><li><i class="fa-solid fa-paw-claws Dragonspire Armada"></i> <b><a href="packs.php?pack=4">Dragonspire Armada</a></b> &ndash; Neutral<br>Bellatrix has yet to meet and form an opinion of their leader. No harm should come to their members unnecessarily. </li><li><i class="fa-solid fa-paw-claws Insomnia"></i> <b><a href="packs.php?pack=24">Insomnia</a></b> &ndash; Wary<br>Do not harm their members, but do not be afraid to defend yourself with the same energy they bring to the table. Bellatrix has met their leaders at the concord of crowns and has come to learn to be wary of them.</li><li><i class="fa-solid fa-paw-claws Obscura"></i> <b><a href="packs.php?pack=21">Obscura</a></b> &ndash; Neutral<br>Bellatrix has met with Scylla, they are neutral to us and we to them. Friendly raiding is encouraged between us.</li><li><i class="fa-solid fa-paw-claws Romalia"></i> <b><a href="packs.php?pack=42">Romalia</a></b> &ndash; Neutral<br>Trixy is aware of Atreyu taking Kage, and while Atreyu is a close friend to Trixy there has been no conversation with them over relations or what Atreyu's pack stands for.</li><li><i class="fa-solid fa-paw-claws Ryukai"></i> <b><a href="packs.php?pack=16">Ryukai</a></b> &ndash; Neutral<br>Bellatrix has met their leader and he has refused any form of alliance but has ensured he is a neutral party. Do not cause unnecessary trouble for them or us.</li><li><i class="fa-solid fa-paw-claws The Covenant"></i> <b><a href="packs.php?pack=45">The Covenant</a></b> &ndash; Neutral<br>Bellatrix has no knowledge of this pack or their Bellatrix was at the founding of this pack, but no trades or anything has been developed. Tread lightly with them.</li><li><i class="fa-solid fa-paw-claws The Syndicate"></i> <b><a href="packs.php?pack=29">The Syndicate</a></b> &ndash; Tense Neutral<br>Do not go out of your way to attack members of their pack, but use good sense when interacting with them. Bellatrix has labeled these wolves as dangerous until proven otherwise. With a change of their leadership known to us now it is unknown if they will continue to be the violent pack they started as.</li><li><i class="fa-solid fa-paw-claws Valhalla"></i> <b><a href="packs.php?pack=38">Valhalla</a></b> &ndash; Unknown<br>Unknown to us. Do no harm but don't be afraid to defend yourselves. Answer them with the energy they give.</li></ul><h2>Ranks</h2><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Artifex</summary>The leader and militaristic head of Norad. They run things around here and they have final say on things. Their word is law and what they say goes. Their duty is to ensure things run smoothly on the home front and to establish when and where we might need to raid, or when we go to war.</details><div><a href="member.php?action=profile&uid=5024">Bellatrix</a></div><br></div><div style="text-align: center"><details><summary class="thead">Carbasa</summary>The Diplomatic head of Norad. The secondary alpha of Norad. This is not just a title, and should be respected just as much as the Artifex. They may establish treaties, alliances and declare another pack our enemy, they may not however send us to war without the Artifex agreeing. Their able to promote and demote the same as the Artifex.</details><br></div><div style="text-align: center"><details><summary class="thead">Regium Prime</summary>The next in line for Artifex. Typically offspring of the Artifex but can be chosen as anyone. This rank cannot be challenged for.</details><div><a href="member.php?action=profile&uid=5854">Sabbath</a></div><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Concilium</summary>The most trusted advisors of Norad. They may make decisions if an Artifex is not around and able to. They may accept recruits. Cannot be challenged for. They are to be double masters in their trades typically and are appointed based on qualifications such as being a previous alpha, being trusted for advice, as well as able to tell their leaders no when there is something they disagree with something. They are typically well travelled, calm and collected under pressure. These are highly respected members of our pack.</details><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Nuptae</summary>The Artifex and Carbasa's Harem. They are to be respected as much as you do the council and the Artifex and Carbasa. They are the "mothers" of our pack's royalties. They are to ensure our pack is cared for in their own way and defend our borders along side our leaders. This position is not something to snort at, they are respected and often council our leaders along side our concilim. They may not punish unjustly but may demote and promote members they see promise in. This rank cannot be challenged for.</details><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Swords</summary>The lead fighters of Norad. The are in charge of making sure  disciples who are going to be fighters are progressing. They may hold trainings and are to be at any raid or seige. Can be challenged for by master fighters.</details><br></div><div style="text-align: center"><details><summary class="thead">Bows</summary>The lead hunters of Norad. They are expected to ensure all our food stores are kept up on. They may hold trainings and pack hunts. Can be challenged for by master hunters.</details><div><a href="member.php?action=profile&uid=4846">Alexander</a></div><br></div><div style="text-align: center"><details><summary class="thead">Pestle</summary>The lead healers of Norad. They are expected to ensure the healers of Norad are trained and the herb storage is kept up on. They may hold trainings and are expected to attend all raid and seige healing camps. Can be challenged for by master healers.</details><div><a href="member.php?action=profile&uid=5475">Mae</a></div><br></div><div style="text-align: center"><details><summary class="thead">Looms</summary>The Master craftsmen of Norad. Their main focus is to create new crafts and maintain upkeep on the current crafting good stocks. Can be challenged for by master Intellectuals.</details><div><a href="member.php?action=profile&uid=6229">Zanka</a></div><br></div><div style="text-align: center"><details><summary class="thead">Couriers</summary>The lead scouts and Navigators of Norad. They are expected to ensure the navigators of Norad are trained and to deliver messages to other packs when the Artifex is unable to. They may hold trainings. Can be challenged for by master Navigators through races.</details><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Shields</summary>The protectors of Norad, typically have fighting as their primary skill.</details><div><a href="member.php?action=profile&uid=6152">Nightmare</a></div><br></div><div style="text-align: center"><details><summary class="thead">Arrows</summary>The hunters of Norad, typically have hunting as their Primary skill.</details><div><a href="member.php?action=profile&uid=5216">Button</a></div><br></div><div style="text-align: center"><details><summary class="thead">Mortars</summary>The healers of Norad, typically have healing as their primary skill.</details><div><a href="member.php?action=profile&uid=5049">Gavroche II</a></div><div><a href="member.php?action=profile&uid=6065">Typhon</a></div><br></div><div style="text-align: center"><details><summary class="thead">Weavers</summary>Norads craftsmen. They craft anything we need and offer in trading.</details><br></div><div style="text-align: center"><details><summary class="thead">Hounds</summary>The Scouts and navigators of Norad, typically have navigation as a primary skill.</details><div><a href="member.php?action=profile&uid=5215">Imogen</a></div><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Futures</summary>The kids, doesn't matter who's, but they are to be protected at all costs. Their jobs are to grow and be fun.</details><div><a href="member.php?action=profile&uid=6062">Atychiphobia</a></div><div><a href="member.php?action=profile&uid=6389">Aurelian</a></div><div><a href="member.php?action=profile&uid=5109">Bells</a></div><div><a href="member.php?action=profile&uid=6155">Cassius</a></div><div><a href="member.php?action=profile&uid=5639">Emrys</a></div><div><a href="member.php?action=profile&uid=6382">Erasmo</a></div><div><a href="member.php?action=profile&uid=5326">Lucis</a></div><div><a href="member.php?action=profile&uid=6385">Mercy</a></div><div><a href="member.php?action=profile&uid=6185">Rhiannon</a></div><div><a href="member.php?action=profile&uid=6160">Sapphire</a></div><div><a href="member.php?action=profile&uid=6156">Vertigo</a></div><br></div><div style="text-align: center"><details><summary class="thead">Commoners</summary>Those that have not decided a specialty or have just joined Norad.</details><div><a href="member.php?action=profile&uid=3628">Bellamy</a></div><br></div></div><div class="flex fill"><div style="text-align: center"><details><summary class="thead">Scelestus</summary>Hardly kept and not used lightly, this is a rank for those that have done crimes against Norad and its Allies. They are not to be harmed, but are to be watched. Are not allowed outside of Norad's territories under any circumstances. Can earn their freedom.</details><br></div></div>
+
+<!-- start: footer -->
+<style>
+.footer-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	width: 100%;
+	margin: 0;
+}
+
+.footer-links {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+.footer-theme {
+	margin-left: auto;
+	white-space: nowrap;
+}
+</style>
+
+<br class="clear">
+<div class="footer row">
+<div style="align-self: center">
+	
+
+						
+<!-- The following piece of code allows MyBB to run scheduled tasks. DO NOT REMOVE --><!-- start: task_image -->
+<img src="https://www.ardently.org/task.php" width="1" height="1" alt="" />
+<!-- end: task_image --><!-- End task image code -->
+<!-- start: global_dst_detection -->
+<script type="text/javascript">if(MyBB) { $([document, window]).bind("load", function() { MyBB.detectDSTChange('-7'); }); }</script>
+<!-- end: global_dst_detection -->
+					
+				
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-arrow-up fa-xl"></i></button> 
+			
+	
+<div class="footer-row">
+
+	<div class="footer-left">
+		<div class="footer-links">
+			<a href="terms.php">Terms &amp; Conditions</a>
+			<span>•</span>
+			<a href="privacy.php">Privacy Policy</a>
+			<span>•</span>
+			<a href="mailto:ardently.rpg@gmail.com">Contact</a>
+			<span>•</span>
+			<a href="guidebook.php?page=Credits">Credits</a>
+		</div>
+<br>
+		<p class="footer-copy">
+			Ardent © 2026 • 
+			Powered By
+			<a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>,
+			&copy; 2002-2026
+			<a href="https://mybb.com" target="_blank" rel="noopener">MyBB Group</a>.
+		</p>
+	</div>
+
+	<div class="footer-theme">
+		<!-- start: footer_themeselect -->
+<div class="theme">
+<form method="POST" action="/packs.php" id="theme_select">
+	<input type="hidden" name="pack" value="34" />
+
+	<input type="hidden" name="my_post_key" value="1e24c637759fd5f7344099b5afbb52e5" />
+	<!-- start: footer_themeselector -->
+<p>	<span id="current_time"><strong>Current time:</strong> 06-19-2026, 12:41 AM </span></p>
+
+<select name="theme" onchange="MyBB.changeTheme();">
+<optgroup label="Quick Theme Select">
+<!-- start: usercp_themeselector_option -->
+<option value="27" selected="selected">(dark) Apocalypse</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="41">--(light) Everything the Light Touches</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="42">--(light) Ice Age</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="43">--(dark) The Long Night</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="50">--(dark) Dichotomy</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="54">--(light) Reactive</option>
+<!-- end: usercp_themeselector_option --><!-- start: usercp_themeselector_option -->
+<option value="53">--(light) Northern Attitude</option>
+<!-- end: usercp_themeselector_option -->
+</optgroup>
+</select>
+<!-- end: footer_themeselector -->
+	<!-- start: gobutton -->
+<input type="submit" class="button" value="Go" />
+<!-- end: gobutton -->
+</form>
+</div>
+<!-- end: footer_themeselect -->
+	</div>
+
+</div>
+	
+	
+	
+	
+	
+	
+</footer>
+	
+  </div>
+	
+	
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+		
+
+</body>
+</html>
+<!-- end: Packs -->
