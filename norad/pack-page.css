@@ -4,14 +4,50 @@ details {
   background: #00809e;
   min-height: 40px;
   border-radius: 10px;
+  margin-bottom: 8px;
+  border:2px ridge #d9d9d9;
 }
 
 summary {
   background: #00add4;
   height: 30px;
   border-radius: 10px 10px 0px 0px;
-  line-height: 26px;
+  line-height: 30px;
+  font-size: 16px;
+  text-align: center;
 }
-summary:marker {
+summary::marker {
+  content: none;
+}
+
+#content {
+  background: #0016;
+  border-radius: 74px;
+}
+
+.title {
   display: none;
+}
+
+.packbanner {
+  position: relative;
+  z-index: 0;
+  border-radius: 70px;
+  box-shadow: inset 0 0 40px 10px #0008;
+}
+.packbanner::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: #0000;
+  background-clip:padding-box;
+  border: 5px double #d9d9d9;
+  border-radius: 70px;
+  z-index: -1;
+}
+
+.packbanner h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  margin: 0px;
 }
