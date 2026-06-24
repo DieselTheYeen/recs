@@ -1,5 +1,10 @@
+/*
+js oneliner to load stylesheet:
+document.head.innerHTML += '<link rel="stylesheet" href="https://dieseltheyeen.github.io/recs/covenant/pack-page.css">';
+*/
+
 /* == Replace with pack-page configurations == */
-/* These values should be set in the pack page screen, not enforced here in css /*
+/* These values should be set in the pack page screen, not enforced here in css */
 #content {
   background: #0000;
 }
@@ -9,5 +14,22 @@ background: url('https://cdnb.artstation.com/p/assets/images/images/062/186/163/
 /* End repace */
 
 header, .packbanner {
+  display: none !important;
+}
+
+#content {
+  color: white;
+}
+
+/*Replace with panel code*/
+.panel {
+  border-radius: 0px;
+  border: 1px solid #6a6761;
+  background: #444;
+  box-shadow: inset 0 0 70px #000, 0 0 20px #000;
+}
+
+/* TODO: Check this is targeting correctly */
+:nth-child(2 of .flex.fill)>div>h2 {
   display: none;
 }
