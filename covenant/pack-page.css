@@ -1,0 +1,13 @@
+/* == Replace with pack-page configurations == */
+/* These values should be set in the pack page screen, not enforced here in css /*
+#content {
+  background: #0000;
+}
+body {
+background: url('https://cdnb.artstation.com/p/assets/images/images/062/186/163/large/arina-grabovskaya-int-001.jpg');
+}
+/* End repace */
+
+header, .packbanner {
+  display: none;
+}
