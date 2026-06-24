@@ -33,3 +33,64 @@ header, .packbanner {
 :nth-child(2 of .flex.fill)>div>h2 {
   display: none;
 }
+
+/* TODO: Everything under here is the primary sheet but hasn't been tested with the above. */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=New+Rocker&display=swap');
+
+:root {
+  --cinderblack: #0d0b0b;
+  --ashwhite: #d9d2c5;
+  --pyrebrand: #a63a24;
+  --embergold: #d98b2b;
+  --ruinwine: #4a1f26;
+  --ironsmoke: #5b6168;
+  --hollowflame: #e65a2e;
+}
+
+body {
+    background: linear-gradient(#0004), url('https://cdnb.artstation.com/p/assets/images/images/062/186/153/large/arina-grabovskaya-int-002.jpg') center center black no-repeat fixed !important;
+    font: 13px 'Comfortaa';
+    line-height: 18px;
+    text-align: justify;
+}
+
+h2 {
+    font: 24px "New Rocker";
+    background: linear-gradient(var(--hollowflame), var(--pyrebrand));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.panel h2 {
+    text-align: center;
+}
+
+hr {
+    display: block;
+    height: 40px !important;
+    margin: 0px;
+    background: linear-gradient(4deg,#781D11, #ff8448, #781D11, #8A6540);
+    mask: url(https://ik.imagekit.io/dzl/gen/hr-star-1) center/360px no-repeat;
+}
+
+#content {
+    background: none;
+    color: #a0a099;
+}
+
+.panel {
+    --color: var(--cinderblack);
+    position: relative;
+    border: 8px solid;
+    border-radius: 0px;
+    padding: 8px;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://www.transparenttextures.com/patterns/concrete-wall-2.png') center/50% var(--color);
+    border-image: url('https://ik.imagekit.io/dzl/gen/border-thin-box-03.png') 8;
+    box-shadow: 0 0 6px #000, 0 0 12px #000;
+}
+
+.palette {
+  width: 200px;
+  height: 270px;
+}
