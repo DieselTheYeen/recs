@@ -117,3 +117,7 @@ details:has(.rank)>summary {
 details:has(.rank)>summary:hover {
     backdrop-filter: brightness(2);
 }
+
+h2:has(+.flex>div>details>.rank) {
+    text-align: center;
+}
