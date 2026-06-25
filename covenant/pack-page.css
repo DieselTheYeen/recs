@@ -41,6 +41,7 @@ h1, h2 {
     background: linear-gradient(var(--hollowflame), var(--pyrebrand));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: unset;
 }
 
 .panel h2 {
@@ -60,8 +61,16 @@ hr {
     position: relative;
     border: 8px solid;
     border-radius: 0px;
-    padding: 8px;
+    padding: 14px;
     background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
     border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
     box-shadow: 0 0 6px #000, 0 0 12px #000;
+    text-align: center;
+}
+
+.rules b {
+    font: 14px "New Rocker";
+    background: linear-gradient(var(--hollowflame), var(--pyrebrand));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
