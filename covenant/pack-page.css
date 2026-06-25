@@ -2,41 +2,7 @@
 js oneliner to load stylesheet:
 document.head.innerHTML += '<link rel="stylesheet" href="https://dieseltheyeen.github.io/recs/covenant/pack-page.css">';
 */
-
-/* == Replace with pack-page configurations == */
-/* These values should be set in the pack page screen, not enforced here in css */
-#content {
-  background: #0000;
-}
-body {
-background: url('https://cdnb.artstation.com/p/assets/images/images/062/186/163/large/arina-grabovskaya-int-001.jpg');
-}
-/* End repace */
-
-header, .packbanner {
-  display: none !important;
-}
-
-#content {
-  color: white;
-}
-
-/*Replace with panel code*/
-.panel {
-  border-radius: 0px;
-  border: 1px solid #6a6761;
-  background: #444;
-  box-shadow: inset 0 0 70px #000, 0 0 20px #000;
-}
-
-/* TODO: Check this is targeting correctly */
-:nth-child(2 of .flex.fill)>div>h2 {
-  display: none;
-}
-
-/* TODO: Everything under here is the primary sheet but hasn't been tested with the above. */
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=New+Rocker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Quicksand:wght@300..700&display=swap');
 
 :root {
   --cinderblack: #0d0b0b;
@@ -50,12 +16,27 @@ header, .packbanner {
 
 body {
     background: linear-gradient(#0004), url('https://cdnb.artstation.com/p/assets/images/images/062/186/153/large/arina-grabovskaya-int-002.jpg') center center black no-repeat fixed !important;
-    font: 13px 'Comfortaa';
-    line-height: 18px;
-    text-align: justify;
+    font: 10pt 'Quicksand';
+}
+body::after {
+    display: none;
 }
 
-h2 {
+header, .packbanner {
+  display: none !important;
+}
+
+#content {
+  background: none;
+  color: #a0a099;
+}
+
+/* Hide General Rules header */
+:nth-child(2 of .flex.fill)>div>h2 {
+  display: none;
+}
+
+h1, h2 {
     font: 24px "New Rocker";
     background: linear-gradient(var(--hollowflame), var(--pyrebrand));
     -webkit-background-clip: text;
@@ -74,23 +55,13 @@ hr {
     mask: url(https://ik.imagekit.io/dzl/gen/hr-star-1) center/360px no-repeat;
 }
 
-#content {
-    background: none;
-    color: #a0a099;
-}
-
 .panel {
     --color: var(--cinderblack);
     position: relative;
     border: 8px solid;
     border-radius: 0px;
     padding: 8px;
-    background: radial-gradient(#0006, var(--cinderblack)), url('https://www.transparenttextures.com/patterns/concrete-wall-2.png') center/50% var(--color);
-    border-image: url('https://ik.imagekit.io/dzl/gen/border-thin-box-03.png') 8;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
+    border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
     box-shadow: 0 0 6px #000, 0 0 12px #000;
-}
-
-.palette {
-  width: 200px;
-  height: 270px;
 }
