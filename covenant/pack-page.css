@@ -59,13 +59,35 @@ hr {
 .panel {
     --color: var(--cinderblack);
     position: relative;
-    border: 8px solid;
     border-radius: 0px;
     padding: 14px;
-    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
+    border: 8px solid;
     border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
     box-shadow: 0 0 6px #000, 0 0 12px #000;
     text-align: center;
+}
+
+.full-width {
+    border: none !important;
+    background: none !important;
+    box-shadow: none;
+}
+
+.full-width::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: -8px calc((100vw - 100%)/-2) -8px calc((100vw - 100%)/-2);
+    background: #000;
+    border: 8px solid;
+    border-width: 8px 0px ;
+    border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
+    z-index: -1;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
+    background: #000;
+    box-shadow: 0 0 6px #000, 0 0 12px #000;
+    mask: linear-gradient(90deg, #0000, #fffa 10vw, #fffa 90vw, #0000);
 }
 
 .rules b {
