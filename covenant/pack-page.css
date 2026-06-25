@@ -56,7 +56,7 @@ hr {
     mask: url(https://ik.imagekit.io/dzl/gen/hr-star-1) center/360px no-repeat;
 }
 
-.panel {
+.panel, :has(>details > .rank) {
     --color: var(--cinderblack);
     position: relative;
     border-radius: 0px;
@@ -95,4 +95,25 @@ hr {
     background: linear-gradient(var(--hollowflame), var(--pyrebrand));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.flex:has(.rank) {
+    justify-content: center;
+}
+
+:has(>details > .rank) {
+    max-width: 400px;
+    --color: #680000;
+    padding: 44px 0px 0px 0px;
+}
+
+details:has(.rank)>summary {
+    background: none;
+    backdrop-filter: brightness(1.5);
+    position: absolute;
+    inset: -4px -4px auto -4px;
+}
+
+details:has(.rank)>summary:hover {
+    backdrop-filter: brightness(2);
 }
