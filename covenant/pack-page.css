@@ -128,3 +128,13 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
     background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,e-grayscale') center no-repeat;
 }
 
+.footer-row {
+    position: relative;
+}
+
+.footer-row::after {
+    content: 'Content by Missy, Code by Diesel ♥';
+    position: absolute;
+    inset: auto 0px -20px 0px;
+    display: block;
+}
