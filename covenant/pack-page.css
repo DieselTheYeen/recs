@@ -121,3 +121,10 @@ details:has(.rank)>summary:hover {
 h2:has(+.flex>div>details>.rank) {
     text-align: center;
 }
+h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after {
+    content: '-';
+    display: inline-block;
+    width: 100px;
+    background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,e-grayscale') center no-repeat;
+}
+
