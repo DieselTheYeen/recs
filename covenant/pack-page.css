@@ -15,7 +15,7 @@ document.head.innerHTML += '<link rel="stylesheet" href="https://dieseltheyeen.g
 }
 
 body {
-    background: linear-gradient(#0004), url('https://cdnb.artstation.com/p/assets/images/images/062/186/153/large/arina-grabovskaya-int-002.jpg') center center black no-repeat fixed !important;
+    background: linear-gradient(#0004 calc(94vh - calc(50vh - 423px)), #030506 calc(100vh - calc(50vh - 423px))) fixed, url('https://cdnb.artstation.com/p/assets/images/images/062/186/153/large/arina-grabovskaya-int-002.jpg') center center black no-repeat fixed !important;
     font: 10pt 'Quicksand';
 }
 body::after {
