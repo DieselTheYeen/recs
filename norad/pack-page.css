@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'NorthEternal';
+  src: url('https://dieseltheyeen.github.io/recs/norad/north-eternal.otf') format('opentype');
+}
+
 .theme {outline: 1px dashed rebeccapurple;}
 
 details {
@@ -48,6 +53,6 @@ summary::marker {
 
 .packbanner h1 {
   text-transform: uppercase;
-  font-size: 50px;
+  font: 20px 'NorthEternal';
   margin: 0px;
 }
