@@ -39,11 +39,12 @@ summary::marker {
   z-index: 0;
   border-radius: 70px;
   box-shadow: inset 0 0 40px 10px #0008;
+  padding: 16px;
 }
 .packbanner::before {
   content: '';
   position: absolute;
-  inset: -1px;
+  inset: 4px;
   background: #0000;
   background-clip:padding-box;
   border: 5px double #d9d9d9;
@@ -53,6 +54,18 @@ summary::marker {
 
 .packbanner h1 {
   text-transform: uppercase;
+  font: 52px 'NorthEternal';
+  margin: 16px 0px 0px 0px;
+  line-height: 1;
+}
+
+.packbanner h2 {
   font: 20px 'NorthEternal';
   margin: 0px;
+  line-height: 1.7;
+}
+
+h2, h1 {
+  font-family: "NorthEternal";
+  color: white !important;
 }
