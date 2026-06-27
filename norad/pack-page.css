@@ -38,16 +38,17 @@ summary::marker {
   position: relative;
   z-index: 0;
   border-radius: 70px;
-  box-shadow: inset 0 0 40px 10px #0008;
   padding: 16px;
+  background: url('https://ik.imagekit.io/dzl/gen/tileable-wood.png?tr=rt-90,w-300') center #00add4 !important;
+  box-shadow: inset 0 0 40px 10px #000;
 }
 .packbanner::before {
   content: '';
   position: absolute;
-  inset: 4px;
+  inset: 2px;
   background: #0000;
   background-clip:padding-box;
-  border: 5px double #d9d9d9;
+  border: 8px double #446;
   border-radius: 70px;
   z-index: -1;
 }
