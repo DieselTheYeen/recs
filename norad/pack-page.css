@@ -50,69 +50,65 @@
 }
 
 /* Teritories */
-.packwrap .flex.fill {
+.packwrap .flex.fill { 
   
   h2 {
     text-align: center;
   }
+
+  ul {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  
+  ul li {
+    a {
+      display: block;
+      text-align: center;
+      width: 180px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      background: #0004;
+      filter: brightness(0.85);
+      color: white !important;
+      text-shadow: 0 0 6px #000 !important;
+      box-shadow: 0 0 12px #000a;
+      border: 4px ridge #8a8e91;
+    }
+    a:hover {
+      box-shadow: 0 0 20px #fffa;
+      filter: brightness(1);
+      transition: 0.1s;
+    }
+    /* Set backgrounds per land location */
+    a[href$="144"] {background: url('https://www.ardently.org/images/lands/144.jpg') center top / 100%;}
+    a[href$="133"] {background: url('https://www.ardently.org/images/lands/133.jpg') center top / 100%;}
+    a[href$="122"] {background: url('https://www.ardently.org/images/lands/122.jpg') center top / 100%;}
+    a[href$="127"] {background: url('https://www.ardently.org/images/lands/127.jpg') center top / 100%;}
+    a[href$="41"] {background: url('https://www.ardently.org/images/lands/41.jpg') center top / 100%;}
+  }
 }
-.packwrap .flex.fill ul {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0px;
-}
-.packwrap .flex.fill ul li {
-  list-style: none;
-}
-.packwrap .flex.fill ul li a {
-  display: block;
-  text-align: center;
-  width: 180px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  background: #0004;
-  filter: brightness(0.85);
-  color: white !important;
-  text-shadow: 0 0 6px #000 !important;
-  box-shadow: 0 0 12px #000a;
-  border: 4px ridge #8a8e91;
-}
-.packwrap .flex.fill ul li a:hover {
-  box-shadow: 0 0 20px #fffa;
-  filter: brightness(1);
-  transition: 0.1s;
-}
-/* Set backgrounds per land location */
-.packwrap .flex.fill ul li a[href$="144"] {
-  background: url('https://www.ardently.org/images/lands/144.jpg') center top / 100%;
-}
-.packwrap .flex.fill ul li a[href$="133"] {
-  background: url('https://www.ardently.org/images/lands/133.jpg') center top / 100%;
-}
-.packwrap .flex.fill ul li a[href$="122"] {
-  background: url('https://www.ardently.org/images/lands/122.jpg') center top / 100%;
-}
-.packwrap .flex.fill ul li a[href$="127"] {
-  background: url('https://www.ardently.org/images/lands/127.jpg') center top / 100%;
-}
-.packwrap .flex.fill ul li a[href$="41"] {
-  background: url('https://www.ardently.org/images/lands/41.jpg') center top / 100%;
-}
+/* End Territories */
 
 /* Former Leaders */
 .packwrap > :last-child {
   
+  
   ul {
-    outline: 1px dashed red;
     list-style: armenian;
   }
 }
-
+/* End Former Leaders */
 
 h2, h1 {
   font-family: "NorthEternal";
