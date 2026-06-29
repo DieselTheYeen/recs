@@ -143,12 +143,23 @@ div:has(.remove-parent-header)>h2:first-child {
 }
 
 .panel {
-    border-radius: 0px;
-    border: 6px ridge #8a8e91;
+    position: relative;
+    border-radius: 20px;
     box-shadow: #000A 0px 0px 20px 0px inset, #244a 0px 0px 60px 20px inset;
-    margin: 0px;
+    margin: 12px;
     padding: 24px;
     background: url("https://ik.imagekit.io/dzl/gen/tileable-wood.png?tr=rt-90,w-240,e-colorize-co-224444") center top #00add4 !important;
+    
+    z-index: 0;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        inset: -32px;
+        border: 96px solid transparent;
+        border-image: url('https://ik.imagekit.io/dzl/a/n/frame02.png?tr=w-1120') 128;
+        z-index: -1;
+    }
 }
 
 .panel h2 {
