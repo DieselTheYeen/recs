@@ -3,8 +3,6 @@
   src: url('https://dieseltheyeen.github.io/recs/norad/north-eternal.otf') format('opentype');
 }
 
-.theme {outline: 1px dashed rebeccapurple;}
-
 #content {
   background: #0016;
   border-radius: 74px;
@@ -21,7 +19,7 @@
 }
 .packbanner h1, .packbanner h2, .packbanner h2::after {
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.85;
   text-shadow: none;
   -webkit-text-stroke: 0.5px #2b2b2b;
 }
@@ -37,13 +35,15 @@
   aspect-ratio: 51 / 13;
   background: url('https://ik.imagekit.io/dzl/a/n/flourish-1.png') center/100% no-repeat;
   transform: translateY(0.9vw);
+  filter: drop-shadow(0 0 6px #2b2b2b);
 }
+
 .packbanner h2 {
   inset: 55% 0px auto 0px;
   font-size: 1.4vw;
 }
 .packbanner h2::after {
-  content: 'Lawful Neutral';
+  content: 'Lawful Nuetral';
   inset: 180% 0px auto 0px;
   font-size: 0.9vw;
   -webkit-text-stroke: 0px;
@@ -51,13 +51,11 @@
 
 /* Teritories */
 .packwrap .flex.fill {
-  grid-column: 1 / 3;
+  
+  h2 {
+    text-align: center;
+  }
 }
-
-.packwrap .flex.fill h2 {
-  text-align: center;
-}
-
 .packwrap .flex.fill ul {
   display: flex;
   gap: 40px;
@@ -82,13 +80,13 @@
   color: white !important;
   text-shadow: 0 0 6px #000 !important;
   box-shadow: 0 0 12px #000a;
+  border: 4px ridge #8a8e91;
 }
 .packwrap .flex.fill ul li a:hover {
   box-shadow: 0 0 20px #fffa;
   filter: brightness(1);
   transition: 0.1s;
 }
-
 /* Set backgrounds per land location */
 .packwrap .flex.fill ul li a[href$="144"] {
   background: url('https://www.ardently.org/images/lands/144.jpg') center top / 100%;
@@ -96,16 +94,23 @@
 .packwrap .flex.fill ul li a[href$="133"] {
   background: url('https://www.ardently.org/images/lands/133.jpg') center top / 100%;
 }
+.packwrap .flex.fill ul li a[href$="122"] {
+  background: url('https://www.ardently.org/images/lands/122.jpg') center top / 100%;
+}
+.packwrap .flex.fill ul li a[href$="127"] {
+  background: url('https://www.ardently.org/images/lands/127.jpg') center top / 100%;
+}
+.packwrap .flex.fill ul li a[href$="41"] {
+  background: url('https://www.ardently.org/images/lands/41.jpg') center top / 100%;
+}
 
 /* Former Leaders */
 .packwrap > :last-child {
-  grid-column: 3;
-}
-
-
-.packwrap > :last-child ul {
-  outline: 1px dashed red;
-  list-style: armenian;
+  
+  ul {
+    outline: 1px dashed red;
+    list-style: armenian;
+  }
 }
 
 
