@@ -10,68 +10,44 @@
   border-radius: 74px;
 }
 
-.title, .packbanner {
+.title {
   display: none;
 }
 
-div.packwrap {
-  margin: 12vw auto 40px;
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 60vw;
-  max-width: 940px;
-}
-div.packwrap > * {
-  grid-column: span 3;
-}
-
-.packwrap .banner {
-  position: absolute;
-  width: 80vw;
-  max-width: 1250px;
-  left: 50%;
-  transform: translateX(-50%) translateY(calc(-100% + 60px));
-  top: 0;
-  border-radius: 200px;
-}
-
-
-/* Removed due to image */
-/*
 .packbanner {
+  background: url('https://ik.imagekit.io/dzl/a/n/banner.png') center/100% no-repeat !important;
+  aspect-ratio: 1075 / 253;
   position: relative;
-  z-index: 0;
-  border-radius: 70px;
-  padding: 16px;
-  background: url('https://ik.imagekit.io/dzl/gen/tileable-wood.png?tr=rt-90,w-240,e-colorize-co-224444') center #00add4 !important;
-  box-shadow: inset 0 0 30px 10px #000a;
 }
-.packbanner::before {
-  content: '';
+.packbanner h1, .packbanner h2, .packbanner h2::after {
   position: absolute;
-  inset: 2px;
-  background: #0000;
-  background-clip:padding-box;
-  border: 5px ridge #fff;
-  border-radius: 70px;
-  z-index: -1;
+  opacity: 0.8;
+  text-shadow: none;
+  -webkit-text-stroke: 0.5px #2b2b2b;
 }
-
 .packbanner h1 {
-  text-transform: uppercase;
-  font: 52px 'NorthEternal';
-  margin: 16px 0px 0px 0px;
-  line-height: 1;
+  inset: 28% 0px auto 0px;
+  font-size: 3.2vw;
 }
 
-.packbanner h2 {
-  font: 20px 'NorthEternal';
-  margin: 0px;
-  line-height: 1.7;
+.packbanner h1::before, .packbanner h1::after {
+  content: '';
+  display: inline-block;
+  width: 4em;
+  aspect-ratio: 51 / 13;
+  background: url('https://ik.imagekit.io/dzl/a/n/flourish-1.png') center/100% no-repeat;
+  transform: translateY(0.9vw);
 }
-*/
-/* End - Removed due to image */
+.packbanner h2 {
+  inset: 55% 0px auto 0px;
+  font-size: 1.4vw;
+}
+.packbanner h2::after {
+  content: 'Lawful Nuetral';
+  inset: 180% 0px auto 0px;
+  font-size: 0.9vw;
+  -webkit-text-stroke: 0px;
+}
 
 /* Teritories */
 .packwrap .flex.fill {
@@ -126,12 +102,19 @@ div.packwrap > * {
   grid-column: 3;
 }
 
+
+.packwrap > :last-child ul {
+  outline: 1px dashed red;
+  list-style: armenian;
+}
+
+
 h2, h1 {
   font-family: "NorthEternal";
   color: white !important;
 }
 
-.panel, .packwrap {
+.panel {
   background: url('https://ik.imagekit.io/dzl/gen/tileable-wood.png?tr=rt-90,w-240,e-colorize-co-224444') top center #00add4 !important;
   border-radius: 0px;
   border: 6px ridge #8a8e91;
