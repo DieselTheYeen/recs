@@ -43,7 +43,7 @@
   font-size: 1.4vw;
 }
 .packbanner h2::after {
-  content: 'Lawful Nuetral';
+  content: 'Lawful Neutral';
   inset: 180% 0px auto 0px;
   font-size: 0.9vw;
   -webkit-text-stroke: 0px;
