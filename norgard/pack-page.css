@@ -1,0 +1,52 @@
+@font-face {
+    font-family: NorthEternal;
+    src: url("https://dieseltheyeen.github.io/recs/norad/north-eternal.otf") format("opentype");
+}
+
+.title {
+    display: none;
+}
+
+.thead.packbanner {
+    aspect-ratio: 1075 / 253;
+    position: relative;
+    background: url("https://ik.imagekit.io/dzl/a/n/banner.png") center center / 100% no-repeat !important;
+}
+
+.packbanner h1,
+.packbanner h2,
+.packbanner h2::after {
+    font-family: NorthEternal;
+    position: absolute;
+    opacity: 0.85;
+    text-shadow: none;
+    -webkit-text-stroke: 1px #2b2b2b;
+}
+
+.packbanner h1 {
+    inset: 28% 0px auto;
+    font-size: 3.2vw;
+}
+
+.packbanner h1::before,
+.packbanner h1::after {
+    content: "";
+    display: inline-block;
+    width: 4em;
+    aspect-ratio: 51 / 13;
+    background: url("https://ik.imagekit.io/dzl/a/n/flourish-1.png") center center / 100% no-repeat;
+    transform: translateY(0.9vw);
+    filter: drop-shadow(#2b2b2b 0px 0px 6px);
+}
+
+.packbanner h2 {
+    inset: 55% 0px auto;
+    font-size: 1.4vw;
+}
+
+.packbanner h2::after {
+    content: "Lawful Nuetral";
+    inset: 180% 0px auto;
+    font-size: 0.9vw;
+    -webkit-text-stroke: 0px;
+}
