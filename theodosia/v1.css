@@ -50,13 +50,25 @@
 
     #art {
         /*! position: absolute; */
+        position: relative;
         /*! inset: 0px auto auto calc(50% - 150px); */
         /*! z-index: 1; */
-        background: pink url('https://cdn.discordapp.com/attachments/1461738385260679198/1494247617570537472/dju0cjs-feee6306-05e4-4a34-a563-6e4a55e9d8c0.png?ex=69e1ea09&amp;is=69e09889&amp;hm=a36a53cab6b4d8c404a4b4c40074444ab871568ab14338a3f1d258409d515e66&amp;)') center / 260px no-repeat;
+        background: url('https://ik.imagekit.io/dzl/a/m/2JSI0LV.png') center / 260px no-repeat;
         width: 300px;
         height: 300px;
         margin: 20px auto;
-        border-radius: 50%;
+        /* border-radius: 50%; */
+        linear
+    }
+
+    #art::before {
+        display: block;
+        content: '';
+        position: absolute;
+        inset: -140px;
+        background: linear-gradient(90deg, #0000 40%, #FFE, #0000 60%), linear-gradient(0deg, #0000 40%, #FFE, #0000 60%), linear-gradient(45deg, #0000 40%, #FFE, #0000 60%), linear-gradient(-45deg, #0000 40%, #FFE, #0000 60%);
+        z-index: -1;
+        mask: radial-gradient(#FFF 20%, #0000 54%);
     }
 
     #cont {
@@ -70,6 +82,18 @@
         box-shadow: 0 0 14px #000A, inset 0 0 30px #EEB098;
         position: relative;
     }
+    &::after {
+        content: 'Code by Diesel ♥';
+        line-height: 0px;
+        transform: translateY(10px);
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .dsl-theo-v1::after {content: none}
 }
 
 @keyframes rotate-border {
