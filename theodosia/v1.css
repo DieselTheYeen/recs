@@ -73,7 +73,7 @@
         position: relative;
         /*! inset: 0px auto auto calc(50% - 150px); */
         /*! z-index: 1; */
-        background: url('https://ik.imagekit.io/dzl/a/m/2JSI0LV.png') center / 260px no-repeat;
+        background: url('https://ik.imagekit.io/dzl/a/m/2JSI0LV.png') center / 260px no-repeat !important;
         width: 300px;
         height: 300px;
         margin: 20px auto;
@@ -115,6 +115,8 @@
 
 @media (max-width: 1200px) {
     .dsl-theo-v1::after {content: none}
+    
+    .dsl-theo-v1 #art::before {content: none}
 }
 
 @keyframes rotate-border {
