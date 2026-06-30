@@ -42,7 +42,7 @@
     #bg {
         position: absolute;
         inset: 2px;
-        background: radial-gradient(#0000 70%, #0009), url('https://cdna.artstation.com/p/assets/images/images/048/982/692/large/michal-kvac-blooming-trees-small.jpg') center/1536px no-repeat;
+        background: radial-gradient(#0000 70%, #0009), linear-gradient(#f3cbdc calc(50% - 432px), #0000 calc(50% - 350px)), linear-gradient(#0000 calc(50% + 350px), #252128 calc(50% + 432px)), url(https://cdna.artstation.com/p/assets/images/images/048/982/692/large/michal-kvac-blooming-trees-small.jpg) center / 1536px no-repeat;
         filter: hue-rotate(0deg) saturate(1) contrast(0.8);
         box-shadow: inset 0 0 12px #000;
         z-index: -1;
