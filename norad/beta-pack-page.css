@@ -12,7 +12,7 @@
     display: none;
 }
 
-.packbanner {
+.thead.packbanner {
     aspect-ratio: 1075 / 253;
     position: relative;
     background: url("https://ik.imagekit.io/dzl/a/n/banner.png") center center / 100% no-repeat !important;
