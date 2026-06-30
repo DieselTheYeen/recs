@@ -85,10 +85,10 @@
         display: block;
         content: '';
         position: absolute;
-        inset: -140px;
+        inset: -80px;
         background: linear-gradient(var(--shine-1-r), #0000 40%, #FFE, #0000 60%), linear-gradient(var(--shine-2-r), #0000 40%, #FFE, #0000 60%), linear-gradient(var(--shine-3-r), #0000 40%, #FFE, #0000 60%), linear-gradient(var(--shine-4-r), #0000 40%, #FFE, #0000 60%);
         z-index: -1;
-        mask: radial-gradient(#FFF 20%, #0000 54%);
+        mask: radial-gradient(#FFF 20%, #0000 70%);
         animation: shine 6s ease-in-out infinite alternate;
     }
 
