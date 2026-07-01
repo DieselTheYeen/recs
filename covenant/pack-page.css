@@ -53,7 +53,7 @@ hr {
     height: 40px !important;
     margin: 0px;
     background: linear-gradient(4deg,#781D11, #ff8448, #781D11, #8A6540);
-    mask: url(https://ik.imagekit.io/dzl/gen/hr-star-1) center/360px no-repeat;
+    mask: url('https://ik.imagekit.io/dzl/a/cov/hr-star-1.png') center/360px no-repeat;
 }
 
 .panel, :has(>details > .rank) {
