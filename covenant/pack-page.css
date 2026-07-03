@@ -138,6 +138,86 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
     background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,e-grayscale') center no-repeat;
 }
 
+.relations {
+    
+    padding: 0px;
+    text-align: left;
+    & li {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 40px 130px 1fr;
+    }
+    
+    & li::before {
+        content: '';
+        display: inline-block;
+        background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,') center / 100% no-repeat var(--pack-color);
+        width: 40px;
+        height: 40px;
+        grid-column: 1;
+    }
+    & h1 {
+        font-size: 13px;
+        margin: 5px;
+        width: 130px;
+        grid-column: 2;
+    }
+    & h1::after {
+        content: 'Unknown';
+        display: block;
+        font-size: 12px;
+        -webkit-text-fill-color: #a0a099;
+    }
+    & li:has(progress[value^="0"]) h1::after {
+        content: 'Hostile';
+    }
+    & li:has(progress[value^="1"]) h1::after {
+        content: 'Unfriendly';
+    }
+    & li:has(progress[value^="2"]) h1::after {
+        content: 'Neutral';
+    }
+    & li:has(progress[value^="3"]) h1::after {
+        content: 'Friendly';
+    }
+    & li:has(progress[value^="4"]) h1::after {
+        content: 'Allied';
+    }
+    & li:has(progress[value^="5"]) h1::after {
+        content: 'Brothers';
+    }
+    
+    progress {
+        appearance: none;
+        background: #0004;
+        border: none;
+        height: 20px;
+        margin: 10px 0px;
+        
+        &::-webkit-progress-bar, &::-moz-progress-bar {
+            background: #a0a099;
+        }
+        &[value^="0"]::-webkit-progress-bar, &[value^="0"]::-moz-progress-bar {
+            background: #af0000;
+        }
+        &[value^="1"]::-webkit-progress-bar, &[value^="1"]::-moz-progress-bar {
+            background: orange;
+        }
+        &[value^="2"]::-webkit-progress-bar, &[value^="2"]::-moz-progress-bar {
+            background: yellow;
+        }
+        &[value^="3"]::-webkit-progress-bar, &[value^="3"]::-moz-progress-bar {
+            background: green;
+        }
+        &[value^="4"]::-webkit-progress-bar, &[value^="4"]::-moz-progress-bar {
+            background: lightblue;
+        }
+        &[value^="5"]::-webkit-progress-bar, &[value^="5"]::-moz-progress-bar {
+            background: rebeccapurple;
+        }
+    }
+}
+
 .footer-row {
     position: relative;
 }
