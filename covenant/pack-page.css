@@ -29,6 +29,7 @@ header, .packbanner {
 #content {
   background: none;
   color: #a0a099;
+  width: unset;
 }
 
 /* Hide General Rules header */
@@ -88,6 +89,15 @@ hr {
     background: #000;
     box-shadow: 0 0 6px #000, 0 0 12px #000;
     mask: linear-gradient(90deg, #0000, #fffa 10vw, #fffa 90vw, #0000);
+}
+
+.userhtml:has(.force-flex) {
+    display: contents;
+}
+.force-flex {
+    margin: 10px;
+    flex: 1;
+    align-self: flex-start;
 }
 
 .rules b {
