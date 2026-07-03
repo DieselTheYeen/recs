@@ -187,12 +187,24 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
         content: 'Brothers';
     }
     
+    div:has(progress) {
+        position: relative;
+    }
+    div:has(progress)::after {
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: repeating-linear-gradient(90deg, #0000, #0000 calc(5% - 2px), #000 5%);
+    }
+    
     progress {
+        position: relative;
         appearance: none;
         background: #0004;
         border: none;
         height: 20px;
         margin: 10px 0px;
+        width: 100%;
         
         &::-webkit-progress-bar, &::-moz-progress-bar {
             background: #a0a099;
@@ -215,6 +227,13 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
         &[value^="5"]::-webkit-progress-bar, &[value^="5"]::-moz-progress-bar {
             background: rebeccapurple;
         }
+}
+    progress::before {
+        outline: 1px solid red;
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: red;
     }
 }
 
