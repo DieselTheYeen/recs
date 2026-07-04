@@ -1,5 +1,36 @@
 .dsl-aly-v1 {
-  width: 580px;
+  position: relative;
+  width: 500px;
   margin: 40px auto;
-  foo: bah;
+  text-align: justify;
+  border: 3px solid #789;
+  padding: 20px;
+  background: linear-gradient(#0000 40%, #111 85%), url('https://cdna.artstation.com/p/assets/images/images/067/130/552/large/michal-kvac-samurai-ver2017.jpg') center top;
+  color: #789;
+  filter: drop-shadow(2px 2px 8px #000);
+  
+  cont {
+    display: block;
+    border: 3px solid;
+    border-image: linear-gradient(#789, #0000 90%) 1;
+    padding: 0px 20px 200px;
+    background: #111;
+  }
+  
+  img {
+    position: absolute;
+    inset: auto 0px 0px;
+  }
+  
+  &::after {
+    content: 'Code by Diesel ♥ Art by Eightysichs';
+    font-size: 12px;
+    opacity: 0.2;
+    position: absolute;
+    inset: auto 0px 2px;
+    text-align: center;
+  }
+  
+  b {
+    color: #8e63b4;
 }
