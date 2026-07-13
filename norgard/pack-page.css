@@ -45,7 +45,7 @@
 }
 
 .packbanner h2::after {
-    content: "Lawful Nuetral";
+    content: "Chaotic Neutral";
     inset: 180% 0px auto;
     font-size: 0.9vw;
     -webkit-text-stroke: 0px;
