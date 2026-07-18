@@ -15,7 +15,7 @@
 .dsl-deo-v2 b, .dsl-deo-v2 .mycode_b {
   color: #0000;
   font-weight: normal !important;
-  background: linear-gradient(20deg, #fcffba, #f2c53e);
+  background: linear-gradient(180deg, #c2ebff, #5669b6);
   -webkit-background-clip: text;
 }
 
