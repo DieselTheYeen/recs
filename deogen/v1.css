@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/biolilbert');
+
 .dsl-deo-v1 {
   position: relative;
   width: 540px;
@@ -24,6 +26,7 @@
   padding: 0px 30px 15px;
   display: block;
   color: #807b71;
+  font: 16px 'biolilbert';
 }
 
 .dsl-deo-v1::after {
@@ -33,4 +36,9 @@
   width: 100%;
   text-align: center;
   opacity: 0.5;
+}
+
+.dsl-deo-v1 h3 {
+  font: 27px 'biolilbert';
+  margin: -10px;
 }
