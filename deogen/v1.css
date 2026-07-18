@@ -1,21 +1,15 @@
 .dsl-deo-v1 {
   position: relative;
-  width: 600px;
-  margin: auto;
+  width: 540px;
+  margin: auto auto 10px;
   background: #363634 radial-gradient(#0000 20%, #111);
   box-shadow: 0 0 12px #000;
   border: 1px solid #363634;
 }
 
-.dsl-deo-v1 #inbord {
-  position: absolute;
-  inset: 10px;
-  border: 1px solid;
-}
-
 .dsl-deo-v1 #art {
-
   mask: linear-gradient(#FFF 86%, #0000 98%);
+  pointer-events: none;
 }
 
 .dsl-deo-v1 b, .dsl-deo-v1 .mycode_b {
@@ -26,8 +20,17 @@
 }
 
 .dsl-deo-v1 content {
-  
-  padding: 0px 20px 10px;
+  text-align: justify;
+  padding: 0px 30px 15px;
   display: block;
   color: #807b71;
+}
+
+.dsl-deo-v1::after {
+  content: "Code by Diesel ♥";
+  position: absolute;
+  bottom: -24px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
 }
