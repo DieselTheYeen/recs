@@ -1,18 +1,35 @@
 .dsl-deo-v2 {
   position: relative;
-  width: 510px;
+  width: 500px;
   margin: auto;
   text-align: justify;
-  padding: 70px;
-  min-height: 580px;
-  background: #636B2F;
+  padding: 80px;
+  background: url('https://images.unsplash.com/photo-1647496087770-be3541b9a468?q=80&w=700') center;
   color: #EEE;
+  z-index: 0;
+  box-shadow: 0 2px 12px #000;
+}
+
+.dsl-deo-v2 b, .dsl-deo-v2 .mycode_b {
+  color: #0000;
+  font-weight: normal !important;
+  background: linear-gradient(20deg, #fcffba, #f2c53e);
+  -webkit-background-clip: text;
+}
+
+.dsl-deo-v2 content {
+  display: block;
+  backdrop-filter: blur(4px);
+  background: #5258664f;
+  padding: 20px;
+  border: 1px solid #686868;
 }
 
 .dsl-deo-v2 #border {
   position: absolute;
   inset: 0px;
   mask: url("https://ik.imagekit.io/dzl/gen/APF92S.png?tr=rt-0") 3px 3px / 120px no-repeat, url("https://ik.imagekit.io/dzl/gen/APF92S.png?tr=rt-90") calc(100% - 3px) 3px / 120px no-repeat, url("https://ik.imagekit.io/dzl/gen/APF92S.png?tr=rt-270") 3px calc(100% - 3px) / 120px no-repeat, url("https://ik.imagekit.io/dzl/gen/APF92S.png?tr=rt-180") calc(100% - 3px) calc(100% - 3px) / 120px no-repeat, linear-gradient(#fff 3px, #0000 3px), linear-gradient(90deg, #fff 3px, #0000 3px), linear-gradient(1800deg, #fff 3px, #0000 3px), linear-gradient(270deg, #fff 3px, #0000 3px);
-  background: linear-gradient(200deg,rgba(198, 119, 0, 1) 0%, rgba(252, 255, 158, 1) 49%, rgba(255, 255, 255, 1) 54%, rgba(252, 255, 158, 1) 55%, rgba(255, 255, 255, 1) 67%, rgba(252, 255, 158, 1) 68%, rgba(198, 119, 0, 1) 100%);
+  background: linear-gradient(-30deg, #8795a0 15%, #ececec 20%, #8795a0 25%, #8795a0 60%, #ececec 65%, #8795a0 70%);
   background-attachment: fixed;
+  z-index: -1;
 }
