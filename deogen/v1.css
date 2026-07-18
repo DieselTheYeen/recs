@@ -1,5 +1,7 @@
 .dsl-deo-v1 {
   outline: 1px solid brown;
+  width: 600px;
+  margin: auto;
 }
 
 .dsl-deo-v1 #art {
@@ -9,4 +11,8 @@
 .dsl-deo-v1 b, .dsl-deo-v1 .mycode_b {
   font-weight: normal;
   color: red;
+}
+
+.dsl-deo-v1 content {
+  
 }
