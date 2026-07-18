@@ -1,23 +1,33 @@
 .dsl-deo-v1 {
-  outline: 1px solid brown;
+  position: relative;
   width: 600px;
   margin: auto;
-  background: #3e3d39 radial-gradient(#0000, #000);
-  background: #252422;
+  background: #363634 radial-gradient(#0000 20%, #111);
+  box-shadow: 0 0 12px #000;
+  border: 1px solid #363634;
+}
+
+.dsl-deo-v1 #inbord {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid;
 }
 
 .dsl-deo-v1 #art {
 
-  mask: linear-gradient(#FFF 90%, #0000);
+  mask: linear-gradient(#FFF 86%, #0000 98%);
 }
 
 .dsl-deo-v1 b, .dsl-deo-v1 .mycode_b {
-  font-weight: normal;
-  color: red;
+  font-weight: normal !important;
+  color: #0000;
+  background: linear-gradient(#9ee762, #4b702c);
+  -webkit-background-clip: text;
 }
 
 .dsl-deo-v1 content {
   
   padding: 0px 20px 10px;
   display: block;
+  color: #807b71;
 }
