@@ -2,10 +2,13 @@
   outline: 1px solid brown;
   width: 600px;
   margin: auto;
+  background: #3e3d39 radial-gradient(#0000, #000);
+  background: #252422;
 }
 
 .dsl-deo-v1 #art {
 
+  mask: linear-gradient(#FFF 90%, #0000);
 }
 
 .dsl-deo-v1 b, .dsl-deo-v1 .mycode_b {
@@ -15,4 +18,6 @@
 
 .dsl-deo-v1 content {
   
+  padding: 0px 20px 10px;
+  display: block;
 }
