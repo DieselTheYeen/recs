@@ -1,0 +1,12 @@
+.dsl-deo-v1 {
+  outline: 1px solid brown;
+}
+
+.dsl-deo-v1 #art {
+
+}
+
+.dsl-deo-v1 b, .dsl-deo-v1 .mycode_b {
+  font-weight: normal;
+  color: red;
+}
