@@ -26,6 +26,7 @@
 .packbanner h1 {
     inset: 28% 0px auto;
     font-size: 3.2vw;
+    margin: 0px;
 }
 
 .packbanner h1::before,
