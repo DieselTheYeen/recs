@@ -7,6 +7,8 @@
     border: 1px solid #505050;
     border-radius: 0px;
     color: #a6a6a6;
+    max-width: 900px;
+    margin: auto;
   }
   .panel {
     outline: 1px solid #505050;
@@ -15,11 +17,11 @@
     border-radius: 0px;
   }
   .contract {
-    flex: 0 0 300px;
-    min-height: 400px;
+    flex: 1;
     text-align: justify;
-    padding: 1em;
+    padding: 6px;
     position: relative;
+    max-width: 270px;
   }
   .contract h3 {
     color: #736755;
