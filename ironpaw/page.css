@@ -1,5 +1,5 @@
-input[value="sad"] {
-  outline: 1px solid red;
+input:not(:placeholder-shown):valid~div {
+  display: block !important;
 }
 
 .ironpaw {
