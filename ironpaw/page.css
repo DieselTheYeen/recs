@@ -9,7 +9,7 @@
     color: #a6a6a6;
   }
   .panel {
-    outline: 1px dashed grey;
+    outline: 1px solid #505050;
     margin: 0px;
     background: #0008;
     border-radius: 0px;
@@ -22,7 +22,7 @@
     position: relative;
   }
   .contract h3 {
-    color: gold;
+    color: #736755;
     text-align: center;
   }
   .contract button {    
