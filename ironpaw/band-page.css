@@ -5,3 +5,34 @@
     border: 1px solid #505050;
     color: #a6a6a6;
 }
+.packbanner {
+  h1 {
+    font-size: 3em;
+    margin: 0px 0px -0.6em;
+      &:before {
+      content: '';
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background: url('https://ik.imagekit.io/dzl/a/ironpaw/paw.png?tr=e-colorize-co-cccccc_in-60,h-80') center no-repeat;
+      
+      vertical-align: central;
+    }
+}
+  h2 {font-size: 1.5em;transform: translateX(30px);}
+}
+.packbanner ~ p:first-of-type {width: 650px; margin: auto; text-align: center;}
+.ooc {
+  &:before {
+    content: 'OOC Note:';
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #736755;
+  }
+  position: relative;
+  padding: 1.5em 1em 0.7em;;
+  background: #0006;
+  border: 1px solid #444;
+  text-align: justify;
+}
