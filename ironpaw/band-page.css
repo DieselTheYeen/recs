@@ -36,3 +36,28 @@
   border: 1px solid #444;
   text-align: justify;
 }
+div:has(>.hide-misc) {
+    display: none;
+}
+.flex.fill:has(.user-flex-group)>div>h2 {
+  display: none;
+}
+.user-flex-group {
+  display: flex;
+  div {
+    flex: 1;
+  }
+}
+.member {
+  display: flex;
+  img {height: 100px;}
+  rank {
+    &:before {content: 'Rank: '; font-weight: bold;}
+  }
+  role {
+    &:before {content: 'Role: '; font-weight: bold;}
+  }
+  assignment {
+    &:before {content: 'Current assignment: '; font-weight: bold;}
+  }
+}
