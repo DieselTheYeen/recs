@@ -48,6 +48,8 @@ div:has(>.hide-misc) {
 }
 .user-flex-group {
   display: flex;
+  gap: 20px;
+  text-align: justify;
   div {
     flex: 1;
   }
@@ -93,7 +95,8 @@ contract {
   &:before {
     content: '\f3a5';
     font-family: "Font Awesome 6 Pro";
-    color: #63938e;
+    color: #85bcb9;
+    margin-right: 4px;
   }
   }
   button {
