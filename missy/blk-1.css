@@ -1,4 +1,5 @@
 .sea-dsl-mis-blk-v1 {
+    --margin-top: 20px;
     width: 640px;
     margin: 0px auto;
     border: 4px double hsl(from var(--fg-color) h calc(s * 0.3) calc(l * 1.2));
@@ -6,6 +7,7 @@
     border-radius: 10px;
     background: var(--bg-color);
 
+    position: relative;
     #contents {
         border-width: 0px 2px;
         border-style: solid;
@@ -18,7 +20,9 @@
         font-family: times;
         letter-spacing: 1px;
         color: color-mix(contrast-color(var(--bg-color)), var(--bg-color) 10%);
-        margin: 20px 30px;
+        margin: var(--margin-top) 30px 20px;
+        z-index: 1;
+        position: inherit;
     }
 
     .mycode_b, b {
