@@ -1,6 +1,17 @@
 body {
   --header-color: #736755;
-  linear-gradient(#060606, #302114) fixed !important;
+  --head-block-color: #5d4d3e;
+  background: linear-gradient(#060606, #302114) fixed !important;
+}
+a {
+  color: contrast-color(var(--head-block-color)) !important;
+  &:hover {
+    color: contrast-color(var(--head-block-color)) !important;
+    filter: brightness(0.5);
+  }
+}
+nav, .dropdown-menu, .thead, input, textarea, select {
+  background: var(--head-block-color);
 }
 h2 {color: var(--header-color) !important;}
 #content {
