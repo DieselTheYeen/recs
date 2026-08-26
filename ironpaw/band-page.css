@@ -26,20 +26,31 @@ h2 {color: var(--header-color) !important;
     color: #a6a6a6;
 }
 .packbanner {
+  background: none;
+  border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/banner2.png?tr=w-1200');
+  height: 0px;
+  border-style: solid;
+  border-image-slice: 59;
+  border-width: 45px;
+  padding: 0px;
+  position: relative;
   h1 {
-    font-size: 3em;
-    margin: 0px 0px -0.6em;
+    font-size: min(3em, 4vw);
+    margin: 0px;
+    position: absolute;
+    inset: -40px 0 auto 0;
       &:before {
       content: '';
       display: inline-block;
-      width: 80px;
-      height: 80px;
-      background: url('https://ik.imagekit.io/dzl/a/ironpaw/paw.png?tr=e-colorize-co-cccccc_in-60,h-80') center no-repeat;
+      width: 60px;
+      height: 60px;
+      background: url('https://ik.imagekit.io/dzl/a/ironpaw/paw.png?tr=e-colorize-co-cccccc_in-60,h-50') center no-repeat;
       
       vertical-align: central;
+      transform: translateY(8px);
     }
 }
-  h2 {font-size: 1.5em;transform: translateX(30px);}
+  h2 {font-size: 1.2em;transform: translateX(16px) translateY(7px);}
 }
 .packbanner ~ p:first-of-type {max-width: 650px; margin: auto; text-align: center;}
 .ooc {
