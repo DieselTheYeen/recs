@@ -16,7 +16,8 @@ a {
 nav, .dropdown-menu, .thead, input, textarea, select {
   background: var(--head-block-color);
 }
-h2 {color: var(--header-color) !important;}
+h2 {color: var(--header-color) !important;
+  font: 300 30px 'noto sans';}
 #content {
     background: linear-gradient(#36393d, #1f2123), url('https://www.transparenttextures.com/patterns/subtle-grunge.png');
     background-blend-mode: color-burn;
@@ -76,14 +77,21 @@ div:has(>.hide-misc) {
 }
 contract {
   position: relative;
-  border: 1px solid #444;
-  flex: 1;
-  max-width: 260px;
-  padding: 1.4em 1em 60px;
-  text-align: justify;
-  background: #0006;
+  border-style: solid;
+  border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/window-with-header.png?tr=w-2300');
+  border-image-slice: 170 40 40 40 fill;
+  border-width: 85px 20px 20px;
+  max-width: 330px;
+  box-shadow: 2px 2px 20px #000a;
+  padding: 4px 4px 60px;
+  text-align: justify;  
   
-  name {font-size: 2em; display: block;text-align: center; position: relative;margin: 12px 0px;color: var(--header-color);}
+  name {
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    margin: -74px 0px 74px;
+    color: var(--header-color);}
   location {
     position: absolute;
     inset: 4px 4px auto auto;
@@ -104,9 +112,21 @@ contract {
       font-weight: 900;
     }
   }
+  hr {
+    margin: 0px;
+    height:   16px !important;
+    background: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/hr.png') center/100% 100% no-repeat;
+    image-rendering: crisp-edges;
+  }
+  rewards {
+    
+  padding: 10px;
+      * {
+      margin: 0px;
+      padding: 0px;
+    }
+}
   gems {
-    display: block;
-    margin-top: 1em;
   &:before {
     content: '\f3a5';
     font-family: "Font Awesome 6 Pro";
@@ -116,8 +136,14 @@ contract {
   }
   button {
     position: absolute;
-    inset: auto auto 0px calc(50% - 56px);
-    width: 100px;
-    height: 30px;
+    background: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/button_gray.png') center/100%;
+    aspect-ratio: 173 / 65;
+    height: unset;
+    width: 130px;
+    inset: auto auto -12px calc(50% - 65px);
+    
+    &:hover {
+      background: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/button_gray-HOVER.png') center/100%;
+    }
   }
 }
