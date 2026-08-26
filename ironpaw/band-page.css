@@ -66,8 +66,10 @@ div:has(>.hide-misc) {
   display: flex;
   gap: 20px;
   text-align: justify;
+  flex-wrap: wrap;
   div {
     flex: 1;
+    min-width: 260px;
   }
 }
 .contracts {
