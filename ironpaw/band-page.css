@@ -130,7 +130,7 @@ contract {
   &:before {
     content: '\f3a5';
     font-family: "Font Awesome 6 Pro";
-    color: #85bcb9;
+    color: #ccc;
     margin-right: 4px;
   }
   }
@@ -141,9 +141,14 @@ contract {
     height: unset;
     width: 130px;
     inset: auto auto -12px calc(50% - 65px);
+    color: #a2998b;
     
     &:hover {
-      background: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/button_gray-HOVER.png') center/100%;
+      color: #a2998b !important;
+      filter: brightness(1.2);
     }
-  }
+    &:active {
+      filter: brightness(0.7);
+    }
+}
 }
