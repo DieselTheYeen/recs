@@ -18,39 +18,58 @@ nav, .dropdown-menu, .thead, input, textarea, select {
 }
 h2 {color: var(--header-color) !important;
   font: 300 30px 'noto sans';}
+#content > div > div:nth-child(3) {
+  position: absolute;
+  inset: -18px 0px auto auto;
+  opacity: 0.6;
+}
 #content {
     background: linear-gradient(#36393d, #1f2123), url('https://www.transparenttextures.com/patterns/subtle-grunge.png');
     background-blend-mode: color-burn;
     box-shadow: inset 0 0 130px #000A, 0px 0px 40px #000A;
     border: 1px solid #505050;
     color: #a6a6a6;
+    position: relative;
 }
 .packbanner {
   background: none;
-  border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/banner2.png?tr=w-1200');
-  height: 0px;
-  border-style: solid;
-  border-image-slice: 59;
-  border-width: 45px;
-  padding: 0px;
   position: relative;
+  z-index: 0;
+  padding: 15px 0px 0px;
+  margin: 0px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+  
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/banner2.png?tr=w-1200');
+    border-style: solid;
+    border-image-slice: 59;
+    border-width: 50px;
+    inset: 0px;
+    z-index: -1;
+  }
+  
   h1 {
     font-size: min(3em, 4vw);
     margin: 0px;
-    position: absolute;
-    inset: -40px 0 auto 0;
+    
       &:before {
       content: '';
       display: inline-block;
       width: 60px;
       height: 60px;
       background: url('https://ik.imagekit.io/dzl/a/ironpaw/paw.png?tr=e-colorize-co-cccccc_in-60,h-50') center no-repeat;
-      
-      vertical-align: central;
-      transform: translateY(8px);
+      vertical-align: -webkit-baseline-middle;
     }
 }
-  h2 {font-size: 1.2em;transform: translateX(16px) translateY(7px);}
+  h2 {font-size: 1.2em;transform: translateY(-100%);}
 }
 .packbanner ~ p:first-of-type {max-width: 650px; margin: auto; text-align: center;}
 .ooc {
