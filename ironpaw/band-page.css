@@ -184,6 +184,7 @@ contract {
     }
 }
 }
+
 ul:has(rel) {
   display: flex;
   flex-wrap: wrap;
@@ -200,7 +201,7 @@ ul:has(rel) {
     grid-template-columns: repeat(5, minmax(0, 1fr));
     min-width: 300px;
 
-    i {text-align: center;font-size: 0.8em;display: flex;align-self: center;justify-self: center;}
+    i {text-align: center;font-size: 0.8em;display: flex;align-self: center;justify-self: center; width: min-content;}
     i:nth-of-type(1) {grid-row: 1; grid-column: 1;}
     i:nth-of-type(2) {grid-row: 1; grid-column: 2;}
     i:nth-of-type(3) {grid-row: 1; grid-column: 3;}
@@ -210,5 +211,4 @@ ul:has(rel) {
     m {grid-row: 2;display: block;background: #26dae1;width: 10px;height: 10px;margin: auto;transform: rotate(45deg) skew(10deg, 10deg);border: 2px solid #514b46;}
     p {grid-row: 3; grid-column: 1 / span 5; padding: 6px;}
   }
-  
 }
