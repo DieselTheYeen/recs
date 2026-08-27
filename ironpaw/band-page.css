@@ -30,10 +30,11 @@ h2 {color: var(--header-color) !important;
     border: 1px solid #505050;
     color: #a6a6a6;
     position: relative;
+    margin: 50px auto 0px;
 }
 .packbanner {
   background: none;
-  position: relative;
+  position: absolute;
   z-index: 0;
   padding: 15px 0px 0px;
   margin: 0px;
@@ -42,7 +43,7 @@ h2 {color: var(--header-color) !important;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2em;
+  inset: -50px -50px auto -50px;
   
   &:before {
     content: '';
@@ -71,7 +72,7 @@ h2 {color: var(--header-color) !important;
 }
   h2 {font-size: 1.2em;transform: translateY(-100%);}
 }
-.packbanner ~ p:first-of-type {max-width: 650px; margin: auto; text-align: center;}
+.packbanner ~ p:first-of-type {max-width: 650px;margin: 40px auto 0px;text-align: center;}
 .ooc {
   &:before {
     content: 'OOC Note:';
