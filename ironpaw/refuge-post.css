@@ -31,3 +31,9 @@
     }
   }
 }
+@media (max-width: 1200px) {
+  .refuge-banner {
+    h2 {position: unset; color: unset;}
+    div {margin: 1em 0px !important;}
+  }
+}
