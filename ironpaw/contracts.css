@@ -1,3 +1,4 @@
+.post:has(.hide-postbit) .member_postbit {display: none;}
 .contract-wrapper {
   display: flex;
   flex-wrap: wrap;
