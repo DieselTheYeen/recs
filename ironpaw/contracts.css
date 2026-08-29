@@ -1,3 +1,81 @@
+.contract-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 2px 2px 20px #000a;
+  
+
+  more {
+    flex: 1;
+    border-style: solid;
+    border-width: 20px 20px 20px 20px;
+    border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/pck-win-slim.png') 40 fill;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    
+    more {width: 330px;}
+  }
+}
 contract {
-  outline: 1px solid red;
+  position: relative;
+  border-style: solid;
+  border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/panel-header-port.png');
+  border-image-slice: 170 40 40 40 fill;
+  border-width: 85px 20px 20px 20px;
+  width: 330px;
+  padding: 4px 4px 60px;
+  text-align: justify;
+  display: block;
+  
+  name {
+    font-size: 2em;
+    display: block;
+    text-align: center;
+    margin: -74px 0px 74px;
+    color: var(--header-color);}
+  location {
+    position: absolute;
+    inset: 4px 4px auto auto;
+    a {background: #71acc2; border-radius: 1em; padding: 0px 6px; margin-left: 6px;color: contrast-color(#71acc2) !important;}
+    & a:before {
+      font-family: "Font Awesome 6 Pro";
+      content: '\f3c5  ';
+    }
+  }
+  packs {
+    position: absolute;
+    inset: 4px auto auto 4px;
+    a {background: var(--c); color: contrast-color(var(--c)) !important; border-radius: 1em; padding: 0px 6px; margin-right: 6px;}
+    & a:before {
+      content: "\f702";
+      font-family: "Font Awesome 6 Pro";
+      margin-right: 4px;
+      font-weight: 900;
+    }
+  }
+  hr {
+    margin: 0px;
+    height:   16px !important;
+    background: url('https://ik.imagekit.io/dzl/a/ironpaw/pkg/hr.png') center/100% 100% no-repeat;
+    image-rendering: crisp-edges;
+  }
+  rewards {
+    
+  padding: 10px;
+      * {
+      margin: 0px;
+      padding: 0px;
+    }
+  } 
+}
+
+gems {
+    &:before {
+      content: '\f3a5';
+      font-family: "Font Awesome 6 Pro";
+      color: #ccc;
+      margin-right: 4px;
+    }
 }
