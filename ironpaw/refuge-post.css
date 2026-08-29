@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 .refuge-banner {
-  outline: 1ps solid red;
+  padding: 70px 0px 0px;
+  position: relative;
+  border-image: url('https://ik.imagekit.io/dzl/a/ironpaw/window-with-header.png');
+  border-image-slice: 60 fill;
+  border-width: 40px;
+  border-style: solid;
+  text-align: justify;
+
+  h2 {
+    position: absolute;
+    inset: -18px 0px auto 0px;
+    margin: 0px;
+    text-align: center;
+    color: #aca08e;
+    font-size: 38px;
+  }
+
+  div {
+    position: relative;
+    margin: 0px 0px 20px;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      inset: 0px;
+      box-shadow: 0 0 8px #000A;
+      background: radial-gradient(#0000 50%, #000A);
+    }
+  }
 }
