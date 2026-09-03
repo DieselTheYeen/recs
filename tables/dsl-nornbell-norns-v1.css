@@ -1,3 +1,15 @@
 .dsl-nornbell-norns-v1 {
   outline: 1px solid red;
+  position: relative;
+  width: 730px;
+  margin: auto;
+  padding: 34em 4em 4em;
+  background: linear-gradient(180deg, #0000 500px, #5e4e7d 570px, #0008), no-repeat url('https://ik.imagekit.io/dzl/a/misc/lux9ti.png') -260px -330px / 1360px;
+
+  .cont {
+    padding: 1em; background: #FFF8;
+    text-align: justify;
+    color: #000A;
+  }
 }
+
