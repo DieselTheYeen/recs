@@ -1,11 +1,19 @@
-.dsl-nornbell-norns-v1 {
-  outline: 1px solid red;
+.dsl-nornbell-norns-v1 {  
   position: relative;
-  width: 730px;
+  width: 630px;
   margin: auto;
-  padding: 34em 4em 4em;
-  background: linear-gradient(180deg, #0000 500px, #5e4e7d 570px, #0008), no-repeat url('https://ik.imagekit.io/dzl/a/misc/lux9ti.png') -260px -330px / 1360px;
+  padding: 6px;  
+  background: linear-gradient(45deg, #3A4654 0%, #9AA8B6 18%, #E7EDF2 34%, #7C8B99 50%, #2E3946 58%, #6E7E8C 74%, #AEBAC6 92%, #E7EDF2 100%);
+  border-radius: 12px;
 
+  box-shadow: 0 0 20px #000;
+  &>div:nth-of-type(1) {
+    padding: 34em 4em 4em;
+    background: linear-gradient(180deg, #0000 500px, #5e4e7d 570px, #191519), no-repeat url('https://ik.imagekit.io/dzl/a/misc/lux9ti.png') -260px -330px / 1360px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px #000;
+  }
+  
   .cont {
     padding: 1em; background: #FFF8;
     text-align: justify;
