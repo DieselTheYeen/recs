@@ -1,1 +1,1 @@
-.dsl-template-v1 {width: 540px; margin: 40px auto; padding: 8px; background: linear-gradient(#000 30%, #0000), url('https://ik.imagekit.io/dzl/gen/tt/light-paper-fibers.png') center, #00271a;}
+.dsl-template-v1 {width: 540px; margin: 40px auto; padding: 8px; background: linear-gradient(#000 30%, #0000), url('https://ik.imagekit.io/dzl/gen/tt/light-paper-fibers.png') center, var(--primary-color);}
