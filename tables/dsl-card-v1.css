@@ -1,13 +1,21 @@
 .dsl-card-v1 {
   position: relative;
-  width: 420px;
-  min-height: 940px;
+  width: 540px;
   background: #322f35;
   border: 6px solid transparent;
   border-image: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/brd-thin.png') 3;
   image-rendering: pixelated;
   margin: 40px auto;
+  box-shadow: 0 10px 40px black;
   
+  
+  brd {
+    position: absolute;
+    inset: 0px;
+    border: 32px solid;
+    border-image: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/chonk_border.png') 16;
+    border-image-repeat: repeat;
+  }
   
   corners {
     position: absolute;
@@ -19,22 +27,38 @@
   art {
     
     /* https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png  */
-    width: 306px;
+    /* width: 306px; */
     height: 274px;
-    background: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png') center/cover, linear-gradient(#0000), url('https://i.ibb.co/x8mVWH0C/citidelsk-by-insomniaclies-dm92ne0.png') -30px -30px/720px, url('https://images.unsplash.com/photo-1514030849962-49ac486d3d20?q=80&w=320') center/cover;
-    clip-path: polygon(0px 45px, 45px 0px, 261px 0px, 100% 45px, 100% 100%, 0% 100%);
+    background: url('https://i.ibb.co/x8mVWH0C/citidelsk-by-insomniaclies-dm92ne0.png') 30px -40px/720px, url('https://images.unsplash.com/photo-1514030849962-49ac486d3d20?q=80&w=320') center/cover;
     display: block;
-    margin: 10px auto;
+    margin: 16px 16px 0px;
+    border: 8px solid;
+    border-image: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/brd-thin.png') 3;
+  }
+
+  stats {
+    display: block;
+    height: 290px;
+    background: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/details-frame.png') center/contain;
+    margin: -116px 0 -110px;
+    position: relative;
+  }
+
+  pole {
+    display: block;
+    height 20px;
+    border: 10px solid;
+    border-image: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/pole.png') 5;
   }
 
   paper {
     display: block;
-    margin: 20px;
-    padding: 20px;
+    margin: 0px;
+    padding: 70px 40px;
     background: #E3DAC9;
     color: #363430;
     text-align: justify;
-
+    
     b {
       color: #1b253b
     }
