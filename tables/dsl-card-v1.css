@@ -1,17 +1,12 @@
 .dsl-card-v1 {
   position: relative;
-  width: 440px;
+  width: 420px;
   min-height: 940px;
   background: #322f35;
-  color: #E3DAC9;
   border: 6px solid transparent;
   border-image: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/brd-thin.png') 3;
   image-rendering: pixelated;
   margin: 40px auto;
-  
-  
-  
-  
   
   
   corners {
@@ -26,9 +21,22 @@
     /* https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png  */
     width: 306px;
     height: 274px;
-    background: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png') center/cover, linear-gradient(#F004), url('https://i.ibb.co/x8mVWH0C/citidelsk-by-insomniaclies-dm92ne0.png') center/cover;
+    background: url('https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png') center/cover, linear-gradient(#0000), url('https://i.ibb.co/x8mVWH0C/citidelsk-by-insomniaclies-dm92ne0.png') -30px -30px/720px, url('https://images.unsplash.com/photo-1514030849962-49ac486d3d20?q=80&w=320') center/cover;
     clip-path: polygon(0px 45px, 45px 0px, 261px 0px, 100% 45px, 100% 100%, 0% 100%);
     display: block;
-    margin: auto;
+    margin: 10px auto;
+  }
+
+  paper {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+    background: #E3DAC9;
+    color: #363430;
+    text-align: justify;
+
+    b {
+      color: #1b253b
+    }
   }
 }
