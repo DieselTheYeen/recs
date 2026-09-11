@@ -27,7 +27,7 @@
   art {
     
     /* https://ik.imagekit.io/dzl/tables/dsl-card-v1/img-frame.png  */
-    height: 274px;
+    height: 350px;
     background: url('https://i.ibb.co/x8mVWH0C/citidelsk-by-insomniaclies-dm92ne0.png') 30px -40px/720px, url('https://images.unsplash.com/photo-1514030849962-49ac486d3d20?q=80&w=320') center/cover;
     display: block;
     margin: 16px 16px 0px;
