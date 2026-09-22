@@ -93,12 +93,14 @@
     display: block;
     margin: 0px;
     padding: 70px 40px;
-    background: #E3DAC9;
-    color: #363430;
+    background: url(https://ik.imagekit.io/dzl/tables/dsl-card-v1/subtle-grunge-x2.png) #1b1b1b;
+    color: #a7a7a7;
     text-align: justify;
+    /* box-shadow: inset 0 0 90px 40px black; */
+    background: radial-gradient(at center, #000000c4 40%, #00000063), url(https://www.transparenttextures.com/patterns/subtle-grunge.png);
     
     b {
-      color: #1b253b
+      color: #396e98;
     }
   }
 }
