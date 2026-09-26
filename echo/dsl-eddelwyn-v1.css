@@ -4,11 +4,8 @@
   width: 670px; margin: 0px auto; background: #000A;
   text-align: justify;
   min-height: 400px;
-  padding: 2em;
   color: #958181;
-  /*! text-shadow: 0 0px 2px black, 0 0px 2px black, 0 0px 2px black, 0 0px 2px black; */
   
-  /*! backdrop-filter: blur(2px); */
   mask: url('https://ik.imagekit.io/dzl/gen/grunge-mask-01.png') center/100% 100%;
   padding: 90px 80px 80px 90px;
   h1 {
@@ -35,5 +32,16 @@
     font-weight: normal;
     color: #508dc2;
     text-shadow: 0 0 8px #5f8fff;
+  }
+  
+  sep {
+    display: block;
+    text-align: center;
+    font: 24px 'redressed';
+  }
+  quote {
+    font: italic 18px 'redressed';
+    text-align: center;
+    display: block;
   }
 }
