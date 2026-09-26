@@ -1,4 +1,15 @@
-.postwrap.fill:has(.dsl-eddelwyn-v1) {}
+.postwrap.fill:has(.dsl-eddelwyn-v1) {background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a;}
 .dsl-eddelwyn-v1 {
-  width: 580px; margin: 40px auto; background: none;
+  width: 580px; margin: 0px auto; /*! background: #000A; */
+  text-align: justify;
+  
+  min-height: 400px;
+  padding: 2em;
+  color: #958181;
+  text-shadow: 0 0px 2px black, 0 0px 2px black, 0 0px 2px black, 0 0px 2px black;
+  b {
+    font-weight: normal;
+    color: #508dc2;
+    text-shadow: 0 0 8px #5f8fff;
+  }
 }
