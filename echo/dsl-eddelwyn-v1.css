@@ -1,12 +1,33 @@
+@import url('https://fonts.cdnfonts.com/css/wrecked-ship');
 .postwrap.fill:has(.dsl-eddelwyn-v1) {background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a;}
 .dsl-eddelwyn-v1 {
   width: 580px; margin: 0px auto; /*! background: #000A; */
   text-align: justify;
-  
   min-height: 400px;
   padding: 2em;
   color: #958181;
   text-shadow: 0 0px 2px black, 0 0px 2px black, 0 0px 2px black, 0 0px 2px black;
+  
+  h1 {
+    font: 30px 'wrecked ship';
+    position: relative;
+    margin: 0px auto 40px;
+    text-align: center;
+  }
+  h1:after {
+    content: 'priestess';
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    transform: scaleX(1.25) scaleY(0.9) perspective(0px) rotateX(0.6deg);
+    text-align: center;
+    width: 100%;
+    color: transparent;
+    text-shadow: none;
+    background: linear-gradient(#2582d4c9, #0000 90%);
+    background-clip: text;
+  }
+  
   b {
     font-weight: normal;
     color: #508dc2;
