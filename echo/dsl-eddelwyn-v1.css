@@ -1,0 +1,4 @@
+.postwrap.fill:has(.dsl-eddelwyn-v1) {}
+.dsl-eddelwyn-v1 {
+  width: 580px; margin: 40px auto; background: none;
+}
