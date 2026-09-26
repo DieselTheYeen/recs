@@ -1,15 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/wrecked-ship');
-.postwrap.fill:has(.dsl-eddelwyn-v1) {position: relative; background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a; &::after {content: 'Code by Diesel ♥'; opacity: 0.4; position: absolute;right: 4px; bottom: 0px;}}
+.postwrap.fill:has(.dsl-eddelwyn-v1) {position: relative; background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a; /*! background: white; */&::after {content: 'Code by Diesel ♥'; opacity: 0.4; position: absolute;right: 4px; bottom: 0px;}}
 .dsl-eddelwyn-v1 {
   width: 670px;
   margin: 0px auto;
-  background: #000A;
   text-align: justify;
   min-height: 400px;
-  color: #958181;  
-  mask: url('https://ik.imagekit.io/dzl/gen/grunge-mask-01.png') center/100% 100%;
-  padding: 90px 80px 80px 90px;
-  
+  color: #958181;
+  border: 75px solid;
+  border-image: url('https://ik.imagekit.io/dzl/gen/grunge-mask-01.png?tr=o-67') 220 180 220 220 fill;
   @media (max-width: 1200px) {
     mask: none;
     backdrop-filter: brightness(0.7);
