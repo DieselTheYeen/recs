@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/wrecked-ship');
-.postwrap.fill:has(.dsl-eddelwyn-v1) {background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a;}
+.postwrap.fill:has(.dsl-eddelwyn-v1) {position: relative; background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a; &::after {content: 'Code by Diesel ♥'; opacity: 0.4; position: absolute;right: 4px; bottom: 0px;}}
 .dsl-eddelwyn-v1 {
   width: 670px; margin: 0px auto; background: #000A;
   text-align: justify;
