@@ -38,6 +38,7 @@
     display: block;
     text-align: center;
     font: 24px 'redressed';
+    padding: 10px 0px 0px;
   }
   quote {
     font: italic 18px 'redressed';
