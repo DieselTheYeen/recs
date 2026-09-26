@@ -1,15 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/wrecked-ship');
-@import url('https://fonts.cdnfonts.com/css/rising-sun');
 .postwrap.fill:has(.dsl-eddelwyn-v1) {background: url('https://ik.imagekit.io/dzl/a/echo/skz72s.png?tr=w-1880,h-2180,cm-extract,x-60,y-0:w-1200') 0px max(50%, 100%)/100% no-repeat, #01020a;}
 .dsl-eddelwyn-v1 {
-  width: 580px; margin: 0px auto;
+  width: 670px; margin: 0px auto; background: #000A;
   text-align: justify;
   min-height: 400px;
   padding: 2em;
   color: #958181;
-  font: 400 14px 'rising sun';
-  text-shadow: 0 0px 2px black, 0 0px 2px black, 0 0px 2px black;
+  /*! text-shadow: 0 0px 2px black, 0 0px 2px black, 0 0px 2px black, 0 0px 2px black; */
   
+  /*! backdrop-filter: blur(2px); */
+  mask: url('https://ik.imagekit.io/dzl/gen/grunge-mask-01.png') center/100% 100%;
+  padding: 90px 80px 80px 90px;
   h1 {
     font: 30px 'wrecked ship';
     position: relative;
