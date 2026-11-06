@@ -91,13 +91,21 @@ hr {
     mask: linear-gradient(90deg, #0000, #fffa 10vw, #fffa 90vw, #0000);
 }
 
-.userhtml:has(.force-flex) {
-    display: contents;
+
+/* Set Rules above Misc */
+div:has(> div > div > .rules) {
+    display: block;
 }
-.force-flex {
-    margin: 10px;
-    flex: 1;
-    align-self: flex-start;
+
+/* Three col flex layout for misc */
+.three-flex-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+.three-flex-layout .panel {
+    flex: 1 1 260px;
 }
 
 .rules b {
@@ -107,6 +115,7 @@ hr {
     -webkit-text-fill-color: transparent;
 }
 
+/* Ranks */
 .flex:has(.rank) {
     justify-content: center;
 }
@@ -128,6 +137,7 @@ details:has(.rank)>summary:hover {
     backdrop-filter: brightness(2);
 }
 
+/* Ranks Header */
 h2:has(+.flex>div>details>.rank) {
     text-align: center;
 }
@@ -138,6 +148,7 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
     background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,e-grayscale') center no-repeat;
 }
 
+/* Relations */
 .relations {
     
     padding: 0px;
@@ -237,6 +248,7 @@ h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after 
     }
 }
 
+/* custom footer text */
 .footer-row {
     position: relative;
 }
