@@ -1,0 +1,249 @@
+/*
+js oneliner to load stylesheet:
+document.head.innerHTML += '<link rel="stylesheet" href="https://dieseltheyeen.github.io/recs/covenant/pack-page.css">';
+*/
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --cinderblack: #0d0b0b;
+  --ashwhite: #d9d2c5;
+  --pyrebrand: #a63a24;
+  --embergold: #d98b2b;
+  --ruinwine: #4a1f26;
+  --ironsmoke: #5b6168;
+  --hollowflame: #e65a2e;
+}
+
+body {
+    background: linear-gradient(#0004 calc(94vh - calc(50vh - 423px)), #030506 calc(100vh - calc(50vh - 423px))) fixed, url('https://cdnb.artstation.com/p/assets/images/images/062/186/153/large/arina-grabovskaya-int-002.jpg') center center black no-repeat fixed !important;
+    font: 10pt 'Quicksand';
+}
+body::after {
+    display: none;
+}
+
+header, .packbanner {
+  display: none !important;
+}
+
+#content {
+  background: none;
+  color: #a0a099;
+  width: unset;
+}
+
+/* Hide General Rules header */
+:nth-child(2 of .flex.fill)>div>h2 {
+  display: none;
+}
+
+h1, h2 {
+    font: 24px "New Rocker";
+    background: linear-gradient(var(--hollowflame), var(--pyrebrand));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: unset;
+}
+
+.panel h2 {
+    text-align: center;
+}
+
+hr {
+    display: block;
+    height: 40px !important;
+    margin: 0px;
+    background: linear-gradient(4deg,#781D11, #ff8448, #781D11, #8A6540);
+    mask: url('https://ik.imagekit.io/dzl/a/cov/hr-star-1.png') center/360px no-repeat;
+}
+
+.panel, :has(>details > .rank) {
+    --color: var(--cinderblack);
+    position: relative;
+    border-radius: 0px;
+    padding: 14px;
+    border: 8px solid;
+    border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
+    box-shadow: 0 0 6px #000, 0 0 12px #000;
+    text-align: center;
+}
+
+.full-width {
+    border: none !important;
+    background: none !important;
+    box-shadow: none;
+}
+
+.full-width::before {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: -8px calc((100vw - 100%)/-2) -8px calc((100vw - 100%)/-2);
+    background: #000;
+    border: 8px solid;
+    border-width: 8px 0px ;
+    border-image: url('https://ik.imagekit.io/dzl/a/cov/border-thin-box-03.png') 8;
+    z-index: -1;
+    background: radial-gradient(#0006, var(--cinderblack)), url('https://ik.imagekit.io/dzl/a/cov/concrete-wall-2.png') center/50% var(--color);
+    background: #000;
+    box-shadow: 0 0 6px #000, 0 0 12px #000;
+    mask: linear-gradient(90deg, #0000, #fffa 10vw, #fffa 90vw, #0000);
+}
+
+.userhtml:has(.force-flex) {
+    display: contents;
+}
+.force-flex {
+    margin: 10px;
+    flex: 1;
+    align-self: flex-start;
+}
+
+.rules b {
+    font: 14px "New Rocker";
+    background: linear-gradient(var(--hollowflame), var(--pyrebrand));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.flex:has(.rank) {
+    justify-content: center;
+}
+
+:has(>details > .rank) {
+    max-width: 400px;
+    --color: #680000;
+    padding: 44px 0px 0px 0px;
+}
+
+details:has(.rank)>summary {
+    background: none;
+    backdrop-filter: brightness(1.5);
+    position: absolute;
+    inset: -4px -4px auto -4px;
+}
+
+details:has(.rank)>summary:hover {
+    backdrop-filter: brightness(2);
+}
+
+h2:has(+.flex>div>details>.rank) {
+    text-align: center;
+}
+h2:has(+.flex>div>details>.rank):before, h2:has(+.flex>div>details>.rank):after {
+    content: '-';
+    display: inline-block;
+    width: 100px;
+    background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,e-grayscale') center no-repeat;
+}
+
+.relations {
+    
+    padding: 0px;
+    text-align: left;
+    & li {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: 40px 130px 1fr;
+    }
+    
+    & li::before {
+        content: '';
+        display: inline-block;
+        background: url('https://ik.imagekit.io/dzl/a/cov/woalf-logo.png?tr=w-40,') center / 100% no-repeat var(--pack-color);
+        width: 40px;
+        height: 40px;
+        grid-column: 1;
+    }
+    & h1 {
+        font-size: 13px;
+        margin: 5px;
+        width: 130px;
+        grid-column: 2;
+    }
+    & h1::after {
+        content: 'Unknown';
+        display: block;
+        font-size: 12px;
+        -webkit-text-fill-color: #a0a099;
+    }
+    & li:has(progress[value^="0"]) h1::after {
+        content: 'Hostile';
+    }
+    & li:has(progress[value^="1"]) h1::after {
+        content: 'Unfriendly';
+    }
+    & li:has(progress[value^="2"]) h1::after {
+        content: 'Neutral';
+    }
+    & li:has(progress[value^="3"]) h1::after {
+        content: 'Friendly';
+    }
+    & li:has(progress[value^="4"]) h1::after {
+        content: 'Allied';
+    }
+    & li:has(progress[value^="5"]) h1::after {
+        content: 'Brothers';
+    }
+    
+    div:has(progress) {
+        position: relative;
+    }
+    div:has(progress)::after {
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: repeating-linear-gradient(90deg, #0000, #0000 calc(5% - 2px), #000 5%);
+    }
+    
+    progress {
+        position: relative;
+        appearance: none;
+        background: #0004;
+        border: none;
+        height: 20px;
+        margin: 10px 0px;
+        width: 100%;
+        
+        &::-webkit-progress-bar, &::-moz-progress-bar {
+            background: #a0a099;
+        }
+        &[value^="0"]::-webkit-progress-bar, &[value^="0"]::-moz-progress-bar {
+            background: #af0000;
+        }
+        &[value^="1"]::-webkit-progress-bar, &[value^="1"]::-moz-progress-bar {
+            background: orange;
+        }
+        &[value^="2"]::-webkit-progress-bar, &[value^="2"]::-moz-progress-bar {
+            background: yellow;
+        }
+        &[value^="3"]::-webkit-progress-bar, &[value^="3"]::-moz-progress-bar {
+            background: green;
+        }
+        &[value^="4"]::-webkit-progress-bar, &[value^="4"]::-moz-progress-bar {
+            background: lightblue;
+        }
+        &[value^="5"]::-webkit-progress-bar, &[value^="5"]::-moz-progress-bar {
+            background: rebeccapurple;
+        }
+}
+    progress::before {
+        outline: 1px solid red;
+        content: '';
+        position: absolute;
+        inset: 0px;
+        background: red;
+    }
+}
+
+.footer-row {
+    position: relative;
+}
+
+.footer-row::after {
+    content: 'Content by Missy, Code by Diesel ♥';
+    position: absolute;
+    inset: auto 0px -20px 0px;
+    display: block;
+}
