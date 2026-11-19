@@ -15,14 +15,17 @@
 
 .family-tree .parents {
   background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center / 50% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center bottom / 5px 50% !important;
+  a {padding: 190px 0 30px;}
 }
 .family-tree .siblings {
-  background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center 12px / 87.5% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center top / 5px 15px !important;
+  background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center 12px / 87.5% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center top / 5px 15px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) calc(50% - 3px) 14px / 12.5% 50% repeat-x !important;
   a {
-    padding-top: 250px;
-    --bg-line: linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center 14px / 5px 50%;
+    --text-height: 195px;
+    padding: 195px 0 45px;
+    text-align: center;
+    color: white !important;
+    font-size: 14px;
   }
-  --bg: url('https://ik.imagekit.io/dzl/Design%20Stash/w6Ka4Z.png?tr=e-colorize-co-000000_in-100,t-true') center / 100% no-repeat;
 }
 
 .family-tree a:hover {
@@ -31,11 +34,10 @@
 .family-tree a {
   flex: 1;
   max-width: 220px;
-  padding: 190px 0 30px;
   text-align: right;
   filter: drop-shadow(2px 2px 0.5px #000000);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 4px 4px 12px rgba(0,0,0,0.5);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .redrum {
   color: #EC1B13 !important;
@@ -50,11 +52,11 @@
   font-size: 35px;
   background: url('https://ik.imagekit.io/dzl/a/ins/ET5ygk.png?updatedAt=1795059470019') center center no-repeat;
 }
-.biohazard {background: url('https://ik.imagekit.io/dzl/a/ins/GVHFcj.png') center / 100% no-repeat, var(--bg-line);}
-.cutthroat {background: url('https://ik.imagekit.io/dzl/a/ins/IXDAS0.png') center / 100% no-repeat, var(--bg-line);}
-.killsaga {background: url('https://ik.imagekit.io/dzl/a/ins/iQm7lt.png') center / 100% no-repeat, var(--bg-line);}
-.hellraiser {background: url('https://ik.imagekit.io/dzl/a/ins/67oXxA.png') center / 100% no-repeat, var(--bg-line);}
-.velrune {background: url('https://ik.imagekit.io/dzl/a/ins/C17p70.png') center / 100% no-repeat, var(--bg-line);}
-.roserot {background: url('https://ik.imagekit.io/dzl/a/ins/Zsfbl4.png') center / 100% no-repeat, var(--bg-line);}
-.carnage {background: url('https://ik.imagekit.io/dzl/a/ins/TzCWeU.png') center / 100% no-repeat, var(--bg-line);}
-.sepulchre {background: url('https://ik.imagekit.io/dzl/a/ins/SgNPJ4.png') center / 100% no-repeat, var(--bg-line);}
+.biohazard {background: url('https://ik.imagekit.io/dzl/a/ins/GVHFcj.png') center / 100% no-repeat;}
+.cutthroat {background: url('https://ik.imagekit.io/dzl/a/ins/IXDAS0.png') center / 100% no-repeat;}
+.killsaga {background: url('https://ik.imagekit.io/dzl/a/ins/iQm7lt.png') center / 100% no-repeat;}
+.hellraiser {background: url('https://ik.imagekit.io/dzl/a/ins/67oXxA.png') center / 100% no-repeat;}
+.velrune {background: url('https://ik.imagekit.io/dzl/a/ins/C17p70.png') center / 100% no-repeat;}
+.roserot {background: url('https://ik.imagekit.io/dzl/a/ins/Zsfbl4.png') center / 100% no-repeat;}
+.carnage {background: url('https://ik.imagekit.io/dzl/a/ins/TzCWeU.png') center / 100% no-repeat;}
+.sepulchre {background: url('https://ik.imagekit.io/dzl/a/ins/SgNPJ4.png') center / 100% no-repeat;}
