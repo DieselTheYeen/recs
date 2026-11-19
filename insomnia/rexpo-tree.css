@@ -3,14 +3,16 @@
     font-family: 'Bloodseeker';
     src: url('https://munchkinlou.github.io/ardent/shoprequest/trenranu/redrum/BloodseekerDemo-DxW1.ttf');
 }
+
+.family-tree {
+  --lc: #5d5d5d;
+}
+
 .family-tree div {
   display: flex;
   justify-content: space-evenly;
 }
 
-.family-tree {
-  --lc: #5d5d5d;
-}
 .family-tree .parents {
   background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center / 50% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center bottom / 5px 50% !important;
 }
@@ -40,13 +42,13 @@
   font-family: 'Bloodseeker', sans-serif;
   font-size: 40px;
   line-height: 1.2;
-  background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4da2081b-4ea4-4f1c-a1d6-e4e32bd6d624/dk4wtrj-bf1c182a-9371-4ce6-9a24-7a1967a7c25f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRkYTIwODFiLTRlYTQtNGYxYy1hMWQ2LWU0ZTMyYmQ2ZDYyNFwvZGs0d3Ryai1iZjFjMTgyYS05MzcxLTRjZTYtOWEyNC03YTE5NjdhN2MyNWYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2xQxFK2FlrJ2-OVkxF3C293nnMbT80jiAcotQvQ3TYw') 16px / 100% no-repeat;
+  background: url('https://ik.imagekit.io/dzl/a/ins/LJuWYw.png?updatedAt=1795059161638') center -22px no-repeat;
 }
 .exposed {
   color: white !important;
   font-family: 'Eagle Lake', sans-serif;
   font-size: 35px;
-  background: url('https://ik.imagekit.io/arl59/Ardent/Shop%20Requests/Missy/Exposed/IMG-1444.png?updatedAt=1750443051227') center / 100% no-repeat;
+  background: url('https://ik.imagekit.io/dzl/a/ins/ET5ygk.png?updatedAt=1795059470019') center center no-repeat;
 }
 .sepulchre {background: url('https://ik.imagekit.io/dzl/dump/KLiXfS.png') center / 100% no-repeat, var(--bg-line);}
 .roserot {background: url('https://ik.imagekit.io/dzl/dump/hNNkUs.png') center / 100% no-repeat, var(--bg-line);}
@@ -54,5 +56,5 @@
 .carnage {background: url('https://ik.imagekit.io/dzl/dump/quK4LM.png') center / 100% no-repeat, var(--bg-line);}
 .hellraiser {background: url('https://ik.imagekit.io/dzl/dump/642Mkw.png') center / 100% no-repeat, var(--bg-line);}
 .cutthroat {background: url('https://ik.imagekit.io/dzl/dump/hNNkUs.png') center / 100% no-repeat, var(--bg-line);}
-.ravager {background: url('https://ik.imagekit.io/dzl/dump/KLiXfS.png') center / 100% no-repeat, var(--bg-line);}
+.velrune {background: url('https://ik.imagekit.io/dzl/dump/KLiXfS.png') center / 100% no-repeat, var(--bg-line);}
 .biohazard {background: url('https://ik.imagekit.io/dzl/dump/a3ibQx.png') center / 100% no-repeat, var(--bg-line);}
