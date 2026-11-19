@@ -26,7 +26,7 @@
 }
 
 .family-tree a:hover {
-  filter: drop-shadow(0 0 12px red);
+  filter: drop-shadow(0 0 12px #ff0000dd);
 }
 .family-tree a {
   flex: 1;
@@ -35,7 +35,7 @@
   text-align: right;
   filter: drop-shadow(2px 2px 0.5px #000000);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7), 4px 4px 12px rgba(0,0,0,0.5);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .redrum {
   color: #EC1B13 !important;
@@ -50,11 +50,11 @@
   font-size: 35px;
   background: url('https://ik.imagekit.io/dzl/a/ins/ET5ygk.png?updatedAt=1795059470019') center center no-repeat;
 }
-.sepulchre {background: url('https://ik.imagekit.io/dzl/dump/KLiXfS.png') center / 100% no-repeat, var(--bg-line);}
-.roserot {background: url('https://ik.imagekit.io/dzl/dump/hNNkUs.png') center / 100% no-repeat, var(--bg-line);}
-.killsaga {background: url('https://ik.imagekit.io/dzl/dump/a3ibQx.png') center / 100% no-repeat, var(--bg-line);}
-.carnage {background: url('https://ik.imagekit.io/dzl/dump/quK4LM.png') center / 100% no-repeat, var(--bg-line);}
-.hellraiser {background: url('https://ik.imagekit.io/dzl/dump/642Mkw.png') center / 100% no-repeat, var(--bg-line);}
-.cutthroat {background: url('https://ik.imagekit.io/dzl/dump/hNNkUs.png') center / 100% no-repeat, var(--bg-line);}
-.velrune {background: url('https://ik.imagekit.io/dzl/dump/KLiXfS.png') center / 100% no-repeat, var(--bg-line);}
-.biohazard {background: url('https://ik.imagekit.io/dzl/dump/a3ibQx.png') center / 100% no-repeat, var(--bg-line);}
+.biohazard {background: url('https://ik.imagekit.io/dzl/a/ins/GVHFcj.png') center / 100% no-repeat, var(--bg-line);}
+.cutthroat {background: url('https://ik.imagekit.io/dzl/a/ins/IXDAS0.png') center / 100% no-repeat, var(--bg-line);}
+.killsaga {background: url('https://ik.imagekit.io/dzl/a/ins/iQm7lt.png') center / 100% no-repeat, var(--bg-line);}
+.hellraiser {background: url('https://ik.imagekit.io/dzl/a/ins/67oXxA.png') center / 100% no-repeat, var(--bg-line);}
+.velrune {background: url('https://ik.imagekit.io/dzl/a/ins/C17p70.png') center / 100% no-repeat, var(--bg-line);}
+.roserot {background: url('https://ik.imagekit.io/dzl/a/ins/Zsfbl4.png') center / 100% no-repeat, var(--bg-line);}
+.carnage {background: url('https://ik.imagekit.io/dzl/a/ins/TzCWeU.png') center / 100% no-repeat, var(--bg-line);}
+.sepulchre {background: url('https://ik.imagekit.io/dzl/a/ins/SgNPJ4.png') center / 100% no-repeat, var(--bg-line);}
