@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oldenburg&display=swap');
 @font-face {
     font-family: 'Bloodseeker';
     src: url('https://munchkinlou.github.io/ardent/shoprequest/trenranu/redrum/BloodseekerDemo-DxW1.ttf');
 }
 
 .family-tree {
-  --lc: #5d5d5d;
+  --line-color: #5d5d5d;
+  --text-color: #ffffff;
 }
 
 .family-tree div {
@@ -14,22 +16,21 @@
 }
 
 .family-tree .parents {
-  background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center / 50% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center bottom / 5px 50% !important;
+  background: linear-gradient(#0000 0px, var(--line-color) 1px, var(--line-color) 4px, #0000 5px) no-repeat center / 50% 5px, linear-gradient(90deg, #0000 0px, var(--line-color) 1px, var(--line-color) 4px, #0000 5px) no-repeat center bottom / 5px 50% !important;
   a {padding: 190px 0 30px;}
 }
 .family-tree .siblings {
-  background: linear-gradient(#0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center 12px / 87.5% 5px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) no-repeat center top / 5px 15px, linear-gradient(90deg, #0000 0px, var(--lc) 1px, var(--lc) 4px, #0000 5px) calc(50% - 3px) 14px / 12.5% 50% repeat-x !important;
+  background: linear-gradient(#0000 0px, var(--line-color) 1px, var(--line-color) 4px, #0000 5px) no-repeat center 12px / 87.5% 5px, linear-gradient(90deg, #0000 0px, var(--line-color) 1px, var(--line-color) 4px, #0000 5px) no-repeat center top / 5px 15px, linear-gradient(90deg, #0000 0px, var(--line-color) 1px, var(--line-color) 4px, #0000 5px) calc(50% - 3px) 14px / 12.5% 50% repeat-x !important;
   a {
-    --text-height: 195px;
-    padding: 195px 0 45px;
+    padding: 240px 0 20px;
     text-align: center;
-    color: white !important;
-    font-size: 14px;
+    color: var(--text-color) !important;
+    font: normal 14px 'Oldenburg';
   }
 }
 
 .family-tree a:hover {
-  filter: drop-shadow(0 0 12px #ff0000dd);
+  filter: drop-shadow(0 0 12px #f00d);
 }
 .family-tree a {
   flex: 1;
@@ -52,11 +53,11 @@
   font-size: 35px;
   background: url('https://ik.imagekit.io/dzl/a/ins/ET5ygk.png?updatedAt=1795059470019') center center no-repeat;
 }
-.biohazard {background: url('https://ik.imagekit.io/dzl/a/ins/GVHFcj.png') center / 100% no-repeat;}
-.cutthroat {background: url('https://ik.imagekit.io/dzl/a/ins/IXDAS0.png') center / 100% no-repeat;}
-.killsaga {background: url('https://ik.imagekit.io/dzl/a/ins/iQm7lt.png') center / 100% no-repeat;}
-.hellraiser {background: url('https://ik.imagekit.io/dzl/a/ins/67oXxA.png') center / 100% no-repeat;}
-.velrune {background: url('https://ik.imagekit.io/dzl/a/ins/C17p70.png') center / 100% no-repeat;}
-.roserot {background: url('https://ik.imagekit.io/dzl/a/ins/Zsfbl4.png') center / 100% no-repeat;}
-.carnage {background: url('https://ik.imagekit.io/dzl/a/ins/TzCWeU.png') center / 100% no-repeat;}
-.sepulchre {background: url('https://ik.imagekit.io/dzl/a/ins/SgNPJ4.png') center / 100% no-repeat;}
+.biohazard {background: url('https://ik.imagekit.io/dzl/a/ins/GVHFcj.png?tr=t-true,w-220') center / 100% no-repeat;}
+.cutthroat {background: url('https://ik.imagekit.io/dzl/a/ins/IXDAS0.png?tr=t-true,w-220') center / 100% no-repeat;}
+.killsaga {background: url('https://ik.imagekit.io/dzl/a/ins/iQm7lt.png?tr=t-true,w-220') center / 100% no-repeat;}
+.hellraiser {background: url('https://ik.imagekit.io/dzl/a/ins/67oXxA.png?tr=t-true,w-220') center / 100% no-repeat;}
+.velrune {background: url('https://ik.imagekit.io/dzl/a/ins/C17p70.png?tr=t-true,w-220') center / 100% no-repeat;}
+.roserot {background: url('https://ik.imagekit.io/dzl/a/ins/Zsfbl4.png?tr=t-true,w-220') center / 100% no-repeat;}
+.carnage {background: url('https://ik.imagekit.io/dzl/a/ins/TzCWeU.png?tr=t-true,w-220') center / 100% no-repeat;}
+.sepulchre {background: url('https://ik.imagekit.io/dzl/a/ins/SgNPJ4.png?tr=t-true,w-220') center / 100% no-repeat;}
